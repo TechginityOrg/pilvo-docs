@@ -8,9 +8,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Pilvo',
+  title: 'Plivo',
   tagline: 'Solution at your Doorstep!',
-  favicon: 'img/pilvo-icon.png',
+  favicon: 'img/plivo-icon.png',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -20,8 +20,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'pilvo', // Usually your GitHub org/user name.
-  projectName: 'pilvo-docs', // Usually your repo name.
+  organizationName: 'plivo', // Usually your GitHub org/user name.
+  projectName: 'plivo-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -74,10 +74,10 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Pilvo',
+        title: 'Plivo',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/pilvo-icon.png',
+          src: 'img/plivo-icon.png',
         },
         items: [
           {
@@ -158,7 +158,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Pilvo.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Plivo.`,
       },
       prism: {
         theme: prismThemes.github,
