@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Congratulations!
+# GO Quickstart
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

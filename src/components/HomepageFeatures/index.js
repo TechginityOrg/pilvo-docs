@@ -4,38 +4,58 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'SMS API',
+    Svg: require('@site/static/img/feature1.svg').default,  // Assuming you have the icon in this path
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Programmatically send and receive text messages.
       </>
     ),
+    link: '/docs/sms-api',  // Add the link for "Learn More"
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'MMS API',
+    Svg: require('@site/static/img/feature2.svg').default,  // Assuming you have the icon in this path
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Engage your customers via picture, audio, and video message.
       </>
     ),
+    link: '/docs/mms-api',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'VOICE API',
+    Svg: require('@site/static/img/feature3.svg').default,  // Assuming you have the icon in this path
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Integrate voice calling into your applications.
       </>
     ),
+    link: '/docs/voice-api',
+  },
+  {
+    title: 'ZENTRUNK',
+    Svg: require('@site/static/img/feature4.svg').default,  // Assuming you have the icon in this path
+    description: (
+      <>
+        Cloud SIP trunking for your VOIP infrastructure.
+      </>
+    ),
+    link: '/docs/zentrunk',
+  },
+  {
+    title: 'CX Platform',
+    Svg: require('@site/static/img/feature5.svg').default,  // Assuming you have the icon in this path
+    description: (
+      <>
+        One powerful platform to power your CX.
+      </>
+    ),
+    link: '/docs/cx-platform',
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description, link}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -44,6 +64,7 @@ function Feature({Svg, title, description}) {
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
+        <a className={styles.learnMore} href={link}>Learn More</a>
       </div>
     </div>
   );
@@ -62,3 +83,4 @@ export default function HomepageFeatures() {
     </section>
   );
 }
+

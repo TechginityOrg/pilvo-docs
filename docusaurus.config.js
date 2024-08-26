@@ -8,9 +8,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'Pilvo',
+  tagline: 'Solution at your Doorstep!',
+  favicon: 'img/pilvo-icon.png',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -20,8 +20,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'pilvo', // Usually your GitHub org/user name.
+  projectName: 'pilvo-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -74,22 +74,43 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Pilvo',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/pilvo-icon.png',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Messaging API',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Voice API', position: 'left'},
+          {to: '/blog', label: 'Verify API', position: 'left'},
+          {to: '/blog', label: 'SIP Trunking', position: 'left'},
+          {to: '/blog', label: 'Phone Numbers', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            label: 'MORE',
+            position: 'left',
+            className: 'navbar__more',
+            items: [
+              { label: 'Account API', to: '/docs/sip-trunking/overview' },
+              { label: 'Client SDK', to: '/docs/sip-trunking/setup-trunks' },
+              { label: 'Lookup API', to: '/docs/sip-trunking/manage-trunks' },
+              { label: 'Integrations', to: '/docs/sip-trunking/call-routing' },
+              { label: 'Full API Reference', to: '/docs/sip-trunking/api-reference' },
+            ],
+          },
+
+          {
+            href: 'https://support.plivo.com/hc/en-us',
+            label: 'Support',
+            position: 'right',
+          },
+          {
+            href: '/',
+            label: 'Login',
             position: 'right',
           },
         ],
