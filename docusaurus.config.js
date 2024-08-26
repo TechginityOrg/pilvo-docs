@@ -95,11 +95,11 @@ const config = {
             position: 'left',
             className: 'navbar__more',
             items: [
-              { label: 'Account API', to: '/docs/sip-trunking/overview' },
-              { label: 'Client SDK', to: '/docs/sip-trunking/setup-trunks' },
-              { label: 'Lookup API', to: '/docs/sip-trunking/manage-trunks' },
-              { label: 'Integrations', to: '/docs/sip-trunking/call-routing' },
-              { label: 'Full API Reference', to: '/docs/sip-trunking/api-reference' },
+              { label: 'Account API', to: '/' },
+              { label: 'Client SDK', to: '/' },
+              { label: 'Lookup API', to: '/' },
+              { label: 'Integrations', to: '/' },
+              { label: 'Full API Reference', to: '/' },
             ],
           },
 
