@@ -28,3 +28,16 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+a {
+  color: var(--ifm-color-primary);
+  /* Use the primary color defined above */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+/* Optional: Change link color on hover */
+a:hover {
+  color: #003366;
+  text-decoration: none;
+}
