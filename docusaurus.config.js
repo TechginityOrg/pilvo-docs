@@ -1,10 +1,4 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -12,23 +6,15 @@ const config = {
   tagline: 'Solution at your Doorstep!',
   favicon: 'img/plivo-icon.png',
 
-  // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'plivo', // Usually your GitHub org/user name.
-  projectName: 'plivo-docs', // Usually your repo name.
+  organizationName: 'plivo',
+  projectName: 'plivo-docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -41,8 +27,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -52,11 +36,8 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -71,7 +52,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Plivo',
@@ -81,15 +61,65 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
+            type: 'dropdown',
             label: 'Messaging API',
+            position: 'left',
+            items: [
+              { to: '/docs/category/quickstart-guides', label: 'Getting Started' },
+              { to: '/docs/quickStart/NodejsQuickstart', label: 'SMS Concepts' },
+              { to: '/docs/quickStart/PHPQuickstart', label: 'WhatsApp Concepts' },
+              { to: '/docs/quickStart/GoQuickstart', label: 'Use Case Guides' },
+              { to: '/docs/quickStart/JavaQuickstart', label: 'API Reference' },
+              { to: '/docs/quickStart/RubyQuickstart', label: 'XML Reference' },
+              { to: '/docs/quickStart/DotNETQuickstart', label: '10DLC' },
+              { to: '/docs/quickStart/NodejsQuickstart', label: 'Troubleshooting' },
+            ],
           },
-          {to: '/docs/quickStart/PHPQuickstart', label: 'Voice API', position: 'left'},
-          {to: '/docs/quickStart/GoQuickstart', label: 'Verify API', position: 'left'},
-          {to: '/docs/quickStart/DotNETQuickstart', label: 'SIP Trunking', position: 'left'},
-          {to: '/docs/quickStart/JavaQuickstart', label: 'Phone Numbers', position: 'left'},
+          {
+            type: 'dropdown',
+            label: 'Voice API',
+            position: 'left',
+            items: [
+              { to: '/', label: 'Getting Started' },
+              { to: '/', label: 'Voice Concepts' },
+              { to: '/', label: 'Use Case Guides' },
+              { to: '/', label: 'API Reference' },
+              { to: '/', label: 'XML Reference' },
+              { to: '/', label: 'Client SDKs' },
+              { to: '/', label: 'Call Insights' },
+              { to: '/', label: 'Troubleshooting' },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: 'Verify API',
+            position: 'left',
+            items: [
+              { to: '/', label: 'Concepts' },
+              { to: '/', label: 'API Reference' },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: 'SIP Trunking',
+            position: 'left',
+            items: [
+              { to: '/', label: 'Getting Started' },
+              { to: '/', label: 'Troubleshooting' },
+              { to: '/', label: 'API Reference' },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: 'Phone Numbers',
+            position: 'left',
+            items: [
+              { to: '/', label: 'Getting Started' },
+              { to: '/', label: 'API Reference' },
+              { to: '/', label: 'Number Porting' },
+              { to: '/', label: 'Regulatory Compliance' },
+            ],
+          },
           {
             label: 'MORE',
             position: 'left',
@@ -102,7 +132,6 @@ const config = {
               { label: 'Full API Reference', to: '/' },
             ],
           },
-
           {
             href: 'https://support.plivo.com/hc/en-us',
             label: 'Support',
