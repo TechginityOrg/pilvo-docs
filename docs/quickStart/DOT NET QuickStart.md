@@ -1,10 +1,13 @@
 ---
-sidebar_position: 1
+sidebar_position: 5
 ---
-
-# Node.js QuickStart
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+<Tabs className="custom-tabs-container">
+      <TabItem value=".NET Core" label=".NET Core" default>
+        # .NET Core QuickStart
+
 
 ## Sign up for a Plivo account
 
@@ -375,3 +378,35 @@ We illustrate [more than a dozen use cases](https://www.plivo.com/docs/messaging
 
   </TabItem>
 </Tabs>
+</TabItem>
+      <TabItem value=".NET Framework" label=".NET Framework">
+        # .NET Framework QuickStart
+        ## Sign up for a Plivo account
+
+When you [Sign up with your work email address](https://console.plivo.com/accounts/register/), we give you a free trial account and free credits to experiment with and learn about our services. You can [add a number](https://console.plivo.com/phone-numbers/search/) to your account to start testing the full range of our voice and SMS service features.
+
+Follow these steps to get a free trial account:
+
+  **1.** [Sign up](https://console.plivo.com/accounts/register/) with your work email address.
+  
+  **2.** Check your inbox for an activation email message from Plivo. Click on the link in the message to activate your account.
+  
+  **3.** Enter your mobile number to complete the phone verification step.
+
+#### Send your first outbound SMS/MMS message
+
+You can create and deploy a PHLO to send your first outbound SMS message with a few clicks on the PHLO canvas, and trigger it with some simple code.
+
+### Create the PHLO
+
+<Tabs>
+<TabItem value="SMS" label="SMS" default>
+![Send SMS](../../static/img/send_sms.gif)
+</TabItem>
+<TabItem value="MMS" label="MMS" default>
+![Send MMS](../../static/img/send_mms.gif)
+</TabItem>
+</Tabs>
+
+      </TabItem>
+    </Tabs>

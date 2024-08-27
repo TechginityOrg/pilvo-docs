@@ -41,15 +41,59 @@ a:hover {
   color: #003366;
   text-decoration: none;
 }
+
 .navbar__more {
-  border: 1px solid #ccc; /* Adjust the border color as needed */
+  border: 1px solid #ccc;
+  /* Adjust the border color as needed */
   padding: 5px 20px;
   border-radius: 4px;
-  background-color: transparent; /* Adjust the background color as needed */
+  background-color: transparent;
+  /* Adjust the background color as needed */
 }
 
 .navbar__more:hover {
-  background-color: #e0e0e0; /* Adjust hover background color as needed */
-  border-color: #bbb; /* Adjust hover border color as needed */
+  background-color: #e0e0e0;
+  /* Adjust hover background color as needed */
+  border-color: #bbb;
+  /* Adjust hover border color as needed */
 }
 
+/* Custom Tabs Container */
+.custom-tabs-container {
+  display: flex;
+  gap: 10px;
+  /* Adjust gap between tabs */
+}
+
+/* Custom Tab Items */
+.custom-tabs-container .tabs__item {
+  padding: 4px 10px;
+  /* Reduce padding to make tabs smaller */
+  border: 1px solid transparent;
+  border-radius: 15px;
+  /* Adjust for smaller rounded corners */
+  color: #00A669;
+  /* Adjust color to your preference */
+  background-color: transparent;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Active Tab */
+.custom-tabs-container .tabs__item--active {
+  border-color: #000080;
+  /* Adjust border color to match your design */
+  color: #000080;
+  /* Adjust color to your preference */
+  background-color: #F4F4F4;
+  /* Adjust background color to your preference */
+}
+
+/* Hover Effect */
+.custom-tabs-container .tabs__item:hover {
+  background-color: #F0F0F0;
+  /* Adjust hover background color */
+  border-color: #00A669;
+  /* Adjust hover border color */
+}
