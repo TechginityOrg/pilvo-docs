@@ -10,10 +10,9 @@ import TabItem from '@theme/TabItem';
 
 <Tabs className="custom-tabs-container">
       <TabItem value="Node.js & Express" label="Zipwhip" default>
-        # Guide for Zipwhip to Pilvo
+        ## Guide for Zipwhip to Pilvo
 
 
-## Sign up for a Plivo account
 
 When you [Sign up with your work email address](https://console.plivo.com/accounts/register/), we give you a free trial account and free credits to experiment with and learn about our services. You can [add a number](https://console.plivo.com/phone-numbers/search/) to your account to start testing the full range of our voice and SMS service features.
 
@@ -384,8 +383,8 @@ We illustrate [more than a dozen use cases](https://www.plivo.com/docs/messaging
 </Tabs>
 </TabItem>
       <TabItem value="Node.js & NestJS" label="Plivo">
-        # Node.js QuickStart
-        ## Sign up for a Plivo account
+        ## Zipwhip conversion QuickStart
+        
 
 When you [Sign up with your work email address](https://console.plivo.com/accounts/register/), we give you a free trial account and free credits to experiment with and learn about our services. You can [add a number](https://console.plivo.com/phone-numbers/search/) to your account to start testing the full range of our voice and SMS service features.
 
