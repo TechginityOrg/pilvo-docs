@@ -86,10 +86,10 @@ const config = {
             position: 'left',
             label: 'Messaging API',
           },
-          {to: '/blog', label: 'Voice API', position: 'left'},
-          {to: '/blog', label: 'Verify API', position: 'left'},
-          {to: '/blog', label: 'SIP Trunking', position: 'left'},
-          {to: '/blog', label: 'Phone Numbers', position: 'left'},
+          {to: '/docs/quickStart/PHPQuickstart', label: 'Voice API', position: 'left'},
+          {to: '/docs/quickStart/GoQuickstart', label: 'Verify API', position: 'left'},
+          {to: '/docs/quickStart/DotNETQuickstart', label: 'SIP Trunking', position: 'left'},
+          {to: '/docs/quickStart/JavaQuickstart', label: 'Phone Numbers', position: 'left'},
           {
             label: 'MORE',
             position: 'left',
@@ -149,7 +149,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: '/',
               },
               {
                 label: 'GitHub',
