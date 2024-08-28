@@ -1,23 +1,92 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-color: #F8F9FB; /* White background */
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroBanner::before,
+.heroBanner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background-size: contain; /* Adjust to fit the image properly */
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
-.buttons {
+.heroBanner::before {
+  left: 0;
+  background-image: url('https://docs.plivo.com/assets/new_docs/images/bg-line01.png');
+}
+
+.heroBanner::after {
+  right: 0;
+  background-image: url('https://docs.plivo.com/assets/new_docs/images/bg-line02.png');
+}
+
+.features {
+  padding: 2rem 0;
+}
+
+.titleWrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.main_title {
+  font-weight: 300; /* Skinnier font weight */
+  line-height: 1.4; /* Adjust line height for better readability */
+  word-wrap: break-word; /* Ensure the text wraps within the container */
+}
+
+.row {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Space between cards */
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  flex: 1;
+  max-width: calc(32% - 1.5rem); /* Three cards per row */
+  margin-right: 2rem;
+}
+
+.cardContent {
+  position: relative;
+  padding: 1rem;
+}
+
+.button-started{
+  color: rgb(35, 140, 35);
+}
+
+.cardImg {
+  width: 60px; /* Adjust size as needed */
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.cardText {
+  margin-left: 80px; /* Adjust based on cardImg size */
+  text-align: left;
+}
+
+.text--center h3 {
+  margin-top: 1rem;
+}
+
+.button {
+  margin-top: 1rem;
 }
