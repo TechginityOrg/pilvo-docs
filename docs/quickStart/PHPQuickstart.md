@@ -63,7 +63,7 @@ You can create and deploy a PHLO to send your first outbound SMS message with a 
 </TabItem>
 </Tabs>
 
-##### Install the Plivo Node.js package
+##### Install the Plivo PHP package
 
 To create a PHLO, visit the [PHLO](https://console.plivo.com/phlo/list/) page of the Plivo console. If this is your first PHLO, the PHLO page will be empty.
 
@@ -381,7 +381,7 @@ We illustrate [more than a dozen use cases](https://www.plivo.com/docs/messaging
 </TabItem>
       <TabItem value="PHP Laravel" label="PHP Laravel">
         # PHP Larval Quickstrart
-        ## Sign up for a Plivo account
+        ## Get Started with PHP Using the Laravel Framework
 
 When you [Sign up with your work email address](https://console.plivo.com/accounts/register/), we give you a free trial account and free credits to experiment with and learn about our services. You can [add a number](https://console.plivo.com/phone-numbers/search/) to your account to start testing the full range of our voice and SMS service features.
 

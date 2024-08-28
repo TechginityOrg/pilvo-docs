@@ -97,3 +97,17 @@ a:hover {
   border-color: #00A669;
   /* Adjust hover border color */
 }
+
+.custom-tabs-container h3,
+.custom-tabs-container h4 {
+  display: none;
+}
+
+.custom-tabs-container h2:target~h3,
+.custom-tabs-container h2:target~h4 {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}

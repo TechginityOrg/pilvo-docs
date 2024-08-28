@@ -381,7 +381,7 @@ We illustrate [more than a dozen use cases](https://www.plivo.com/docs/messaging
 </TabItem>
       <TabItem value="Node.js & NestJS" label="Node.js & NestJS">
         # Node.js QuickStart
-        ## Sign up for a Plivo account
+        ## Get Started with Node.js Using the NestJS Framework
 
 When you [Sign up with your work email address](https://console.plivo.com/accounts/register/), we give you a free trial account and free credits to experiment with and learn about our services. You can [add a number](https://console.plivo.com/phone-numbers/search/) to your account to start testing the full range of our voice and SMS service features.
 
