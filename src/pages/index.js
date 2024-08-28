@@ -9,12 +9,13 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        <h3 className="hero__title">Add SMS text messaging or voice calling functionality to your applications in minutes</h3>
+        <div className={styles.titleWrapper}>
+          <h1 className="main_title">Add SMS text messaging or voice calling functionality to your applications in minutes</h1>
+        </div>
       </div>
     </header>
   );
 }
-
 function Card({ title, description, link, imgSrc }) {
   return (
     <div className={clsx('col col--4', styles.card)}>
@@ -102,6 +103,12 @@ export default function Home() {
         {
           title: 'Conference with PIN',
           description: 'Connect multiple people in a secure voice call.',
+          link: '/',
+          imgSrc: 'https://docs.plivo.com/assets/posts/images/use-cases/conference.svg',
+        },
+        {
+          title: 'Pinless Conference',
+          description: 'Connect multiple people over a single voice call.',
           link: '/',
           imgSrc: 'https://docs.plivo.com/assets/posts/images/use-cases/conference.svg',
         },

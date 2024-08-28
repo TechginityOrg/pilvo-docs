@@ -3,7 +3,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: #fff; /* White background */
+  background-color: #F8F9FB; /* White background */
 }
 
 .heroBanner::before,
@@ -30,6 +30,17 @@
 
 .features {
   padding: 2rem 0;
+}
+
+.titleWrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.main_title {
+  font-weight: 300; /* Skinnier font weight */
+  line-height: 1.4; /* Adjust line height for better readability */
+  word-wrap: break-word; /* Ensure the text wraps within the container */
 }
 
 .row {
