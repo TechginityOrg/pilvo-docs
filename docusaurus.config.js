@@ -48,6 +48,18 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'voiceAPI',  // An identifier for this docs plugin instance
+        path: 'voiceAPI',  // Path to your voiceAPI content
+        routeBasePath: 'voiceAPI',  // URL base path for voiceAPI
+        sidebarPath: require.resolve('./sidebars.js'),  // Sidebar configuration
+        editUrl: 'https://github.com/your-repo/your-project/edit/main/voiceAPI/',
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -80,14 +92,14 @@ const config = {
             label: 'Voice API',
             position: 'left',
             items: [
-              { to: '/', label: 'Getting Started' },
-              { to: '/', label: 'Voice Concepts' },
-              { to: '/', label: 'Use Case Guides' },
-              { to: '/', label: 'API Reference' },
-              { to: '/', label: 'XML Reference' },
-              { to: '/', label: 'Client SDKs' },
-              { to: '/', label: 'Call Insights' },
-              { to: '/', label: 'Troubleshooting' },
+              { to: 'voiceAPI/category/quickstart-guides', label: 'Getting Started' },
+              { to: '/voiceAPI/quickStart/NodejsQuickstart', label: 'Voice Concepts' },
+              { to: '/voiceAPI/quickStart/PHPQuickstart', label: 'Use Case Guides' },
+              { to: '/voiceAPI/quickStart/GoQuickstart', label: 'API Reference' },
+              { to: '/voiceAPI/quickStart/JavaQuickstart', label: 'XML Reference' },
+              { to: '/voiceAPI/quickStart/RubyQuickstart', label: 'Client SDKs' },
+              { to: '/voiceAPI/quickStart/DotNETQuickstart', label: 'Call Insights' },
+              { to: '/voiceAPI/quickStart/NodejsQuickstart', label: 'Troubleshooting' },
             ],
           },
           {
