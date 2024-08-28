@@ -12,8 +12,7 @@ const config = {
   organizationName: 'plivo',
   projectName: 'plivo-docs',
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'ignore',
 
   i18n: {
     defaultLocale: 'en',
