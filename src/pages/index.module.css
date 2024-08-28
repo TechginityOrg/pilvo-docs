@@ -3,7 +3,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: #F8F9FB; /* White background */
+  background-color: #F8F9FB;
 }
 
 .heroBanner::before,
@@ -13,7 +13,7 @@
   top: 0;
   width: 20%;
   height: 100%;
-  background-size: contain; /* Adjust to fit the image properly */
+  background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -38,15 +38,16 @@
 }
 
 .main_title {
-  font-weight: 300; /* Skinnier font weight */
-  line-height: 1.4; /* Adjust line height for better readability */
-  word-wrap: break-word; /* Ensure the text wraps within the container */
+  font-weight: 300;
+  line-height: 1.4;
+  word-wrap: break-word;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem; /* Space between cards */
+  gap: 1.5rem;
+  justify-content: center; /* Center cards horizontally */
 }
 
 .card {
@@ -56,10 +57,9 @@
   overflow: hidden;
   text-align: center;
   padding: 1rem;
-  margin-bottom: 1.5rem;
-  flex: 1;
-  max-width: calc(32% - 1.5rem); /* Three cards per row */
-  margin-right: 2rem;
+  flex: 1 0 33.333%; /* Responsive width with min-width */
+  max-width: 30%; /* Maximum width for cards */
+  margin: 0.5rem; /* Consistent margin */
 }
 
 .cardContent {
@@ -72,14 +72,14 @@
 }
 
 .cardImg {
-  width: 60px; /* Adjust size as needed */
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+  width: 60px;
+  position: relative; /* Removed absolute positioning */
+  margin: 0 auto 1rem auto; /* Centered the image */
+  display: block; /* Ensures image takes up full width */
 }
 
 .cardText {
-  margin-left: 80px; /* Adjust based on cardImg size */
+  margin-left: 0; /* Removed margin-left */
   text-align: left;
 }
 
@@ -89,4 +89,12 @@
 
 .button {
   margin-top: 1rem;
+}
+
+/* Media Queries for better responsiveness */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 0 100%; /* Stack cards vertically on smaller screens */
+    max-width: 100%; /* Full width on smaller screens */
+  }
 }
