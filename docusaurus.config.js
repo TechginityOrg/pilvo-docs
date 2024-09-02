@@ -58,6 +58,23 @@ const config = {
         editUrl: 'https://github.com/your-repo/your-project/edit/main/voiceAPI/',
       },
     ],
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'api',
+        docsPluginId: 'classic', // This should match the docs plugin ID you're using
+        config: {
+          plivoApi: {
+            specPath: './dummy.yaml',
+            outputDir: 'docs/api', // Where the generated docs will be saved
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+              categoryLinkSource: 'tag',
+            },
+          },
+        },
+      },
+    ],
   ],
 
   themeConfig:

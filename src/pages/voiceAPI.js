@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import CustomLayout from '../components/CustomLayout'
 export default function NewRoute() {
     return (
         <Layout title="My New Route">

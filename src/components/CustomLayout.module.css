@@ -1,0 +1,24 @@
+.customLayout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Ensure items start at the same vertical position */
+}
+
+.content {
+    flex: 1;
+    /* Take up the remaining space */
+    padding-right: 2rem;
+    /* Space between content and snippet box */
+}
+
+.snippetBox {
+    width: 400px;
+    /* Increase width as needed */
+    height: 100%;
+    /* Set height to fill the available space */
+    position: sticky;
+    top: 100px;
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+}

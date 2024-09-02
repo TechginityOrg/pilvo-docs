@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+slug: /messaging/quickstart/php-server
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
