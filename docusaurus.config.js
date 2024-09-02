@@ -1,4 +1,9 @@
 import { themes as prismThemes } from 'prism-react-renderer';
+const Preset = require("@docusaurus/preset-classic");
+// const { Config } = require("@docusaurus/types");
+const OpenApiPlugin = require("docusaurus-plugin-openapi-docs");
+
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -28,6 +33,7 @@ const config = {
           sidebarPath: './sidebars.js',
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          docItemComponent: "@theme/ApiItem",
         },
         blog: {
           showReadingTime: true,
@@ -76,6 +82,7 @@ const config = {
       },
     ],
   ],
+  themes: ["docusaurus-theme-openapi-docs"],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
