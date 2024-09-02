@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+slug: /messaging/quickstart/JavaQuickstart
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

@@ -1,74 +1,36 @@
 openapi: 3.0.0
 info:
-  title: Plivo Message API
-  description: This API enables clients to send SMS and MMS messages using Plivo's messaging service.
-  version: "1.0"
+  title: Plivo Messaging API
+  description: The Plivo Messaging API allows you to send and receive SMS and MMS messages.
+  version: 1.0.0
 servers:
   - url: https://api.plivo.com/v1/Account/{auth_id}/Message/
-    description: Plivo SMS/MMS service endpoint
+    description: Plivo API server
+    variables:
+      auth_id:
+        default: your_auth_id
+        description: Your Plivo Account ID
 paths:
   /:
-    post:
-      summary: Send an SMS or MMS message
-      description: |
-        This API enables you to send messages via Plivo's SMS service.
-      operationId: sendMessage
-      tags:
-        - Messages
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                src:
-                  type: string
-                  description: Sender ID (phone number, short code, or alphanumeric string). Required if not using powerpack_uuid.
-                powerpack_uuid:
-                  type: string
-                  description: The UUID of the SMS Powerpack. Required if not using src.
-                dst:
-                  type: string
-                  description: Destination phone number(s), separated by < if multiple.
-                text:
-                  type: string
-                  description: The content of the SMS message. Required unless sending MMS.
-                type:
-                  type: string
-                  description: Type of message (sms or mms). Defaults to sms.
-                media_urls:
-                  type: string
-                  description: Comma-separated list of media URLs for MMS.
-                message_expiry:
-                  type: string
-                  description: Time in seconds for the message to remain in the queue.
-                url:
-                  type: string
-                  description: Callback URL for status updates.
-                dlt_entity_id:
-                  type: string
-                  description: DLT entity ID for India DLT registrations.
-                dlt_template_id:
-                  type: string
-                  description: DLT template ID for India DLT registrations.
-                dlt_template_category:
-                  type: string
-                  description: DLT template category for India DLT registrations.
-                method:
-                  type: string
-                  description: HTTP method for callback URL. Defaults to POST.
-                log:
-                  type: boolean
-                  description: If false, content is not logged. Defaults to true.
-                trackable:
-                  type: boolean
-                  description: If true, implies intent to use Conversion Feedback API. Defaults to false.
-              required:
-                - dst
+    get:
+      summary: List Messages
+      description: Retrieve a list of messages sent from your Plivo account.
+      parameters:
+        - name: limit
+          in: query
+          description: Number of messages to return
+          required: false
+          schema:
+            type: integer
+        - name: offset
+          in: query
+          description: Offset for pagination
+          required: false
+          schema:
+            type: integer
       responses:
-        200:
-          description: Message sent successfully
+        '200':
+          description: A list of messages
           content:
             application/json:
               schema:
@@ -76,267 +38,78 @@ paths:
                 properties:
                   api_id:
                     type: string
-                    description: The API request ID.
-                  message_uuid:
-                    type: array
-                    items:
-                      type: string
-                    description: The UUID(s) of the message(s).
-        400:
-          description: Bad request (e.g., missing required fields, invalid parameters)
-        401:
-          description: Unauthorized (invalid auth credentials)
-        500:
-          description: Internal server error
-    get:
-      summary: List all messages
-      description: |
-        This API retrieves a list of Message Detail Records (MDR) based on a filter criteria over the last 90 days.
-      operationId: listAllMessages
-      tags:
-        - Messages
-      parameters:
-        - name: subaccount
-          in: query
-          schema:
-            type: string
-          description: Filters for outbound messages sent or inbound messages received associated with a specific subaccount.
-        - name: message_direction
-          in: query
-          schema:
-            type: string
-          description: Filters the results by message direction. Allowed values are inbound, outbound.
-        - name: message_time
-          in: query
-          schema:
-            type: string
-          description: Filters messages based on the time they were initiated or received in UTC.
-        - name: message_state
-          in: query
-          schema:
-            type: string
-          description: Filter results by the current status of a message.
-        - name: message_type
-          in: query
-          schema:
-            type: string
-          description: Filter results by the type of message.
-        - name: error_code
-          in: query
-          schema:
-            type: string
-          description: Filter results by a standard Plivo error code.
-        - name: powerpack_id
-          in: query
-          schema:
-            type: string
-          description: Filter results based on messages sent using a specific Powerpack.
-        - name: from_number
-          in: query
-          schema:
-            type: string
-          description: Filters results by the sender number or ID.
-        - name: to_number
-          in: query
-          schema:
-            type: string
-          description: Filters results by the recipient number.
-        - name: limit
-          in: query
-          schema:
-            type: integer
-          description: Denotes the number of results per page. Maximum is 20.
-        - name: offset
-          in: query
-          schema:
-            type: integer
-          description: Denotes the number of items by which the results should be offset.
-        - name: destination_country_iso2
-          in: query
-          schema:
-            type: string
-          description: Filters results by the ISO2 code of the country associated with the destination number.
-        - name: tendlc_registration_status
-          in: query
-          schema:
-            type: string
-          description: Filters results by the 10DLC registration status of the message. Relevant only for long code messaging in the US.
-        - name: tendlc_campaign_id
-          in: query
-          schema:
-            type: string
-          description: Filters results by the 10DLC campaign ID associated with the message. Relevant only for long code messaging in the US.
-      responses:
-        '200':
-          description: Successfully retrieved a list of Message Detail Records.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  meta:
-                    type: object
-                    properties:
-                      limit:
-                        type: integer
-                      offset:
-                        type: integer
-                      next:
-                        type: string
-                      previous:
-                        type: string
-                  messages:
+                    description: Unique identifier for the API request
+                  count:
+                    type: integer
+                    description: Total number of messages
+                  message_list:
                     type: array
                     items:
                       type: object
                       properties:
                         message_uuid:
                           type: string
-                        from:
-                          type: string
+                          description: Unique identifier for the message
                         to:
                           type: string
-                        status:
+                          description: Recipient phone number
+                        from:
                           type: string
-                        message_time:
-                          type: string
-                          format: date-time
+                          description: Sender phone number
                         text:
                           type: string
-                        type:
+                          description: Message content
+                        status:
                           type: string
-                        error_code:
-                          type: string
-                        powerpack_id:
-                          type: string
-                        message_direction:
-                          type: string
-                        destination_country_iso2:
-                          type: string
-                        tendlc_registration_status:
-                          type: string
-                        tendlc_campaign_id:
-                          type: string
-        '429':
-          description: Too many requests - rate limit exceeded.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  error:
-                    type: string
-                    example: "too many requests"
-  /{message_uuid}:
+                          description: Status of the message
+
+  
+  /{message_uuid}/:
     get:
-      summary: Retrieve a Message
-      description: |
-        Retrieves a Message Detail Record (MDR).
-      operationId: retrieveMessage
-      tags:
-        - Messages
+      summary: Retrieve Message
+      description: Retrieve the details of a specific message by its UUID.
       parameters:
         - name: message_uuid
           in: path
+          description: Unique identifier for the message
           required: true
-          description: The unique identifier of the message.
           schema:
             type: string
       responses:
         '200':
-          description: Successfully retrieved the message detail record.
+          description: Details of the message
           content:
             application/json:
               schema:
                 type: object
                 properties:
+                  api_id:
+                    type: string
+                    description: Unique identifier for the API request
                   message_uuid:
                     type: string
-                  from:
-                    type: string
+                    description: Unique identifier for the message
                   to:
                     type: string
-                  status:
+                    description: Recipient phone number
+                  from:
                     type: string
-                  message_time:
-                    type: string
-                    format: date-time
+                    description: Sender phone number
                   text:
                     type: string
-  /{message_uuid}/Media/:
-    get:
-      summary: List MMS Media
-      description: Lists the media files sent or received with an MMS message.
-      operationId: listMmsMedia
-      tags:
-        - MMS
-      parameters:
-        - name: message_uuid
-          in: path
-          required: true
-          description: The unique identifier of the MMS message.
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successfully retrieved the list of media files associated with the MMS message.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  media_files:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        media_id:
-                          type: string
-                          description: The unique identifier of the media file.
-                        media_url:
-                          type: string
-                          description: The URL to access the media file.
-                        content_type:
-                          type: string
-                          description: The MIME type of the media file.
-    
+                    description: Message content
+                  status:
+                    type: string
+                    description: Status of the message
+        '404':
+          description: Message not found
+
 components:
-  parameters:
-    auth_id:
-      name: auth_id
-      in: path
-      required: true
-      description: The authorization ID from your Plivo account.
-      schema:
-        type: string
   schemas:
-    messageRecord:
+    Error:
       type: object
       properties:
-        message_uuid:
+        message:
           type: string
-        from:
-          type: string
-        to:
-          type: string
-        status:
-          type: string
-        message_time:
-          type: string
-          format: date-time
-        text:
-          type: string
-        type:
-          type: string
-        error_code:
-          type: string
-        powerpack_id:
-          type: string
-        message_direction:
-          type: string
-        destination_country_iso2:
-          type: string
-        tendlc_registration_status:
-          type: string
-        tendlc_campaign_id:
-          type: string
+        code:
+          type: integer
