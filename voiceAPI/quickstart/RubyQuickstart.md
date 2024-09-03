@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+slug: /docs/voice/quickstart/ruby-sinatra/
 ---
 
 import Tabs from '@theme/Tabs';

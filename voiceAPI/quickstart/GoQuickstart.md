@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+slug: /docs/voice/quickstart/go-gin/
 ---
 
 import Tabs from '@theme/Tabs';

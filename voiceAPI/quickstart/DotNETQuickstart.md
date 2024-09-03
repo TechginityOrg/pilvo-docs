@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+slug: /docs/voice/quickstart/dotnet-core/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

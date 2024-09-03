@@ -1,12 +1,13 @@
 ---
 sidebar_position: 2
+slug: /docs/voice/quickstart/php/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs className="custom-tabs-container">
       <TabItem value="PHP Server" label="PHP Server" default>
-        # PHP Quickstrart
+        # PHP Quickstart
 
 
 ## Sign up for a Plivo account
