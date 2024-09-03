@@ -1,13 +1,13 @@
 ---
 id: retrieve-message
-title: "Retrieve Message"
-description: "Retrieve the details of a specific message by its UUID."
-sidebar_label: "Retrieve Message"
+title: "Retrieve a Message"
+description: "Retrieves a Message Detail Record (MDR)."
+sidebar_label: "Retrieve a Message"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVE1r4zAQ/StiTrtg4nTpybdCl6WHQGmaw1JCUKxxPF1bUqVRdo3Rf19kO+kmKdtCfbFlzZs3H2+mB4W+dGSZjIYCHpAd4R4F1ygUsqTGC1MJKbzFkioqRYveyx2KbSeIvVit7m5nkIGVTrbI6DwUTz1o2SIUMBlvQiAFGVDisJJryM6IV5peAgpSqJkqQicq44YoJheQgcOXQA4VFOwCZuDLGlsJRQ/c2cTm2ZHeQYzrZOyt0R59uv82n6fXKeXta3qnPKXRjJoTQlrbUCkTIn/2CdZf0prtM5acauCMRcc0kkpLG1KX4X089Zv7O5GSRs8Qs9NifsLtIdOYAZv3HT1gSZZQs7C10Sh0aLfoErpypn0fv0St0F2AGf/w++DFpLZDT2IGniUH/wHewe68vXF4MrieX19K4sCmDYvKBK0gDnXn2igoYIdDl5N+C8j7f/sRc8jAo9sfBiC4Bgqoma0v8lxamtmG9mZWmjbfX+U3ZWmC5ryXgetNwk/c+UUe9wk3aGH0DxnspSO5bSadjR7GbCoZGoYCOhPc5nBz7vGnCU5Mbsc4xN1tqsw6jWg1aoK4wSP7GBzpXYrjwt9jjeINOyGbxvz2ojNBsBEetRJSK+GwRNqjWC6Ww3mxWB7a49MqSTUcHV/N5rN56rk1nls5jN+0WY6banGc25Og+tcx/sRWmxSWtJrbRpJOwQyt7ScdPEFxtuRgnUFtPKe7vt9KjyvXxJh+vwR0HRRP69cWDmJR5NO3gqKSjcf/pPLlYVqCX8VHVuab8U8/pe4GKTUhnSCDX9idr+y4jhnUKBW6IdDR5KYs0fI/4Is1mZR0HJsf3x8hxr+ibzl7
+api: eJyVVM1u4zYQfpXBnHYB1Up61M1FFm1QuA1i95QYiwk5srmRSIUcemsIAvoafb0+STGSvJs4PrS+WJzfjx+/mR4tJxNdJy54rPCeJTo+cAKCFadEO4YbFnIN3LMJ0cKH1c39x8WjxwJDx5E08dZihXFOndOwQKFdwuoBZ0vCbYEdRWpZOKqnR08tY4XtFPE5Z2exQKdQOpI9Fhj5JbvIFiuJmYszvJs9Q/buJTM4y15c7ThCqEH2DHPVBRaYzJ5bwqpHOXbaMUl0fofDsNUWqQs+cVL/j1dX+ve2zTobwynVuWmOcLqofd0E7MRSHFnSliZ4YS9ajLqucWakqvyStGL/HlF4+sJGsMAuKrHiJjxvqHmPv8A6hvaiQ8JFcxKSnC66Tr3E6aucBxRYh9iSYIWWhH8Yo7QP/ymXmB1/WlT2QQWy4/F2+qwVlv3riw36RBwPJ1nk2GCFe5EuVWVJnVt0jTuEhQltebgul8aE7KXsKcv+s7NDOUusxHOB3GkerFfrcrVag/ZwhoG97YLzgvr8ztcTU04a/pZyUv/y7vZdUVXdFLW8u4WcOMEvm80dHDg+JSBvIQl5S9FO9olyMMFyAgnQ0jODE2BKKtc6RDiGrB7nhXeRhMGEts1+Vk1SR9CgOFZZwCZAYpMjT0adEk4yVtfzTGYBX3n6Hq2KNhw4jqjWi0f/6G9rLfDPX39HhiaEZ+d3I56xU+PYC6xvfk3FCNCQh9r5UfgtkID7fa3uApbexuDsdFACforha+KohrHPb0G4AiXO5Bi1rOJzwZ+GVbG5BIfrKV9N0yXG/kCRTxlsgRI0JJxkjG14R+Y47aQ5Biu8XlypOruQpKVx5OZlc9px31fc+QP334f3/23EeQR0IsquIecVwSjmfhb+A1ZvJnpb4D4kUUffP1HiP2IzDGp+yRyPWD1sCzxQdPSk4nzo0bqk3xarmpp0vhFfQ/9wP+/Oj/Bf9+TFC8xG8kclmJqsJyzwmY/nu3vYDgXumSzHEewUsjSGO3mV/G4h6hx+WxQ/f9rgMPwLNhBKQA==
 sidebar_class_name: "get api-method"
-info_path: docs/api/plivo-messaging-api
+info_path: ./voiceAPI/apiDocs/plivo-message-api
 custom_edit_url: null
 ---
 
@@ -27,20 +27,21 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Retrieve Message"}
+  children={"Retrieve a Message"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"get"}
-  path={"/{message_uuid}/"}
+  path={"/{message_uuid}"}
 >
   
 </MethodEndpoint>
 
 
 
-Retrieve the details of a specific message by its UUID.
+Retrieves a Message Detail Record (MDR).
+
 
 <Heading
   id={"request"}
@@ -68,7 +69,7 @@ Retrieve the details of a specific message by its UUID.
     <ul>
       <ParamsItem
         className={"paramsItem"}
-        param={{"name":"message_uuid","in":"path","description":"Unique identifier for the message","required":true,"schema":{"type":"string"}}}
+        param={{"name":"message_uuid","in":"path","required":true,"description":"The unique identifier of the message.","schema":{"type":"string"}}}
       >
         
       </ParamsItem>
@@ -87,7 +88,7 @@ Retrieve the details of a specific message by its UUID.
         <div>
           
           
-          Details of the message
+          Successfully retrieved the message detail record.
           
           
         </div><div>
@@ -128,29 +129,11 @@ Retrieve the details of a specific message by its UUID.
                     >
                       <SchemaItem
                         collapsible={false}
-                        name={"api_id"}
-                        required={false}
-                        schemaName={"string"}
-                        qualifierMessage={undefined}
-                        schema={{"type":"string","description":"Unique identifier for the API request"}}
-                      >
-                        
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
                         name={"message_uuid"}
                         required={false}
                         schemaName={"string"}
                         qualifierMessage={undefined}
-                        schema={{"type":"string","description":"Unique identifier for the message"}}
-                      >
-                        
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
-                        name={"to"}
-                        required={false}
-                        schemaName={"string"}
-                        qualifierMessage={undefined}
-                        schema={{"type":"string","description":"Recipient phone number"}}
+                        schema={{"type":"string"}}
                       >
                         
                       </SchemaItem><SchemaItem
@@ -159,16 +142,16 @@ Retrieve the details of a specific message by its UUID.
                         required={false}
                         schemaName={"string"}
                         qualifierMessage={undefined}
-                        schema={{"type":"string","description":"Sender phone number"}}
+                        schema={{"type":"string"}}
                       >
                         
                       </SchemaItem><SchemaItem
                         collapsible={false}
-                        name={"text"}
+                        name={"to"}
                         required={false}
                         schemaName={"string"}
                         qualifierMessage={undefined}
-                        schema={{"type":"string","description":"Message content"}}
+                        schema={{"type":"string"}}
                       >
                         
                       </SchemaItem><SchemaItem
@@ -177,7 +160,25 @@ Retrieve the details of a specific message by its UUID.
                         required={false}
                         schemaName={"string"}
                         qualifierMessage={undefined}
-                        schema={{"type":"string","description":"Status of the message"}}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message_time"}
+                        required={false}
+                        schemaName={"date-time"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","format":"date-time"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"text"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
                       >
                         
                       </SchemaItem>
@@ -188,7 +189,7 @@ Retrieve the details of a specific message by its UUID.
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"api_id\": \"string\",\n  \"message_uuid\": \"string\",\n  \"to\": \"string\",\n  \"from\": \"string\",\n  \"text\": \"string\",\n  \"status\": \"string\"\n}"}
+                    responseExample={"{\n  \"message_uuid\": \"string\",\n  \"from\": \"string\",\n  \"to\": \"string\",\n  \"status\": \"string\",\n  \"message_time\": \"2024-07-29T15:51:28.071Z\",\n  \"text\": \"string\"\n}"}
                     language={"json"}
                   >
                     
@@ -197,19 +198,6 @@ Retrieve the details of a specific message by its UUID.
               </SchemaTabs>
             </TabItem>
           </MimeTabs>
-        </div>
-      </TabItem><TabItem
-        label={"404"}
-        value={"404"}
-      >
-        <div>
-          
-          
-          Message not found
-          
-          
-        </div><div>
-          
         </div>
       </TabItem>
     </ApiTabs>
