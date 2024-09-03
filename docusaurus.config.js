@@ -1,4 +1,9 @@
 import { themes as prismThemes } from 'prism-react-renderer';
+const Preset = require("@docusaurus/preset-classic");
+// const { Config } = require("@docusaurus/types");
+const OpenApiPlugin = require("docusaurus-plugin-openapi-docs");
+
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -28,6 +33,7 @@ const config = {
           sidebarPath: './sidebars.js',
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          docItemComponent: "@theme/ApiItem",
         },
         blog: {
           showReadingTime: true,
@@ -56,9 +62,28 @@ const config = {
         routeBasePath: 'voiceAPI',  // URL base path for voiceAPI
         sidebarPath: require.resolve('./sidebars.js'),  // Sidebar configuration
         editUrl: 'https://github.com/your-repo/your-project/edit/main/voiceAPI/',
+        docItemComponent: "@theme/ApiItem",
+      },
+    ],
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'apiDocs',
+        docsPluginId: 'apiDocs', // This should match the docs plugin ID you're using
+        config: {
+          plivoApi: {
+            specPath: './dummy.yaml',
+            outputDir: './voiceAPI/apiDocs', // Where the generated docs will be saved
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+              categoryLinkSource: 'tag',
+            },
+          },
+        },
       },
     ],
   ],
+  themes: ["docusaurus-theme-openapi-docs"],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -80,7 +105,7 @@ const config = {
               { to: '/docs/quickStart/NodejsQuickstart', label: 'SMS Concepts' },
               { to: '/docs/quickStart/PHPQuickstart', label: 'WhatsApp Concepts' },
               { to: '/docs/quickStart/GoQuickstart', label: 'Use Case Guides' },
-              { to: '/docs/quickStart/JavaQuickstart', label: 'API Reference' },
+              { to: '/docs/category/api-guides', label: 'API Reference' },
               { to: '/docs/quickStart/RubyQuickstart', label: 'XML Reference' },
               { to: '/docs/quickStart/DotNETQuickstart', label: '10DLC' },
               { to: '/docs/quickStart/NodejsQuickstart', label: 'Troubleshooting' },
@@ -94,7 +119,7 @@ const config = {
               { to: 'voiceAPI/category/quickstart-guides', label: 'Getting Started' },
               { to: '/voiceAPI/quickStart/NodejsQuickstart', label: 'Voice Concepts' },
               { to: '/voiceAPI/quickStart/PHPQuickstart', label: 'Use Case Guides' },
-              { to: '/voiceAPI/quickStart/GoQuickstart', label: 'API Reference' },
+              { to: '/voiceAPI/category/api-guides', label: 'API Reference' },
               { to: '/voiceAPI/quickStart/JavaQuickstart', label: 'XML Reference' },
               { to: '/voiceAPI/quickStart/RubyQuickstart', label: 'Client SDKs' },
               { to: '/voiceAPI/quickStart/DotNETQuickstart', label: 'Call Insights' },

@@ -1,0 +1,105 @@
+openapi: 3.0.0
+info:
+  title: Plivo Messaging API
+  description: The Plivo Messaging API allows you to send and receive SMS and MMS messages.
+  version: 1.0.0
+servers:
+  - url: https://api.plivo.com/v1/Account/{auth_id}/Message/
+    description: Plivo API server
+    variables:
+      auth_id:
+        default: your_auth_id
+        description: Your Plivo Account ID
+paths:
+  /:
+    get:
+      summary: List Messages
+      description: Retrieve a list of messages sent from your Plivo account.
+      parameters:
+        - name: limit
+          in: query
+          description: Number of messages to return
+          required: false
+          schema:
+            type: integer
+        - name: offset
+          in: query
+          description: Offset for pagination
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A list of messages
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  api_id:
+                    type: string
+                    description: Unique identifier for the API request
+                  count:
+                    type: integer
+                    description: Total number of messages
+                  message_list:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        message_uuid:
+                          type: string
+                          description: Unique identifier for the message
+                        to:
+                          type: string
+                          description: Recipient phone number
+                        from:
+                          type: string
+                          description: Sender phone number
+                        text:
+                          type: string
+                          description: Message content
+                        status:
+                          type: string
+                          description: Status of the message
+
+  
+  /{message_uuid}/:
+    get:
+      summary: Retrieve Message
+      description: Retrieve the details of a specific message by its UUID.
+      parameters:
+        - name: message_uuid
+          in: path
+          description: Unique identifier for the message
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of the message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  api_id:
+                    type: string
+                    description: Unique identifier for the API request
+                  message_uuid:
+                    type: string
+                    description: Unique identifier for the message
+                  to:
+                    type: string
+                    description: Recipient phone number
+                  from:
+                    type: string
+                    description: Sender phone number
+                  text:
+                    type: string
+                    description: Message content
+                  status:
+                    type: string
+                    description: Status of the message
+        '404':
+          description: Message not found

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /messaging/quickstart/node-expressjs
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
