@@ -103,13 +103,3 @@ paths:
                     description: Status of the message
         '404':
           description: Message not found
-
-components:
-  schemas:
-    Error:
-      type: object
-      properties:
-        message:
-          type: string
-        code:
-          type: integer

@@ -1,0 +1,218 @@
+---
+id: retrieve-message
+title: "Retrieve Message"
+description: "Retrieve the details of a specific message by its UUID."
+sidebar_label: "Retrieve Message"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1r4zAQ/StiTrtg4nTpybdCl6WHQGmaw1JCUKxxPF1bUqVRdo3Rf19kO+kmKdtCfbFlzZs3H2+mB4W+dGSZjIYCHpAd4R4F1ygUsqTGC1MJKbzFkioqRYveyx2KbSeIvVit7m5nkIGVTrbI6DwUTz1o2SIUMBlvQiAFGVDisJJryM6IV5peAgpSqJkqQicq44YoJheQgcOXQA4VFOwCZuDLGlsJRQ/c2cTm2ZHeQYzrZOyt0R59uv82n6fXKeXta3qnPKXRjJoTQlrbUCkTIn/2CdZf0prtM5acauCMRcc0kkpLG1KX4X089Zv7O5GSRs8Qs9NifsLtIdOYAZv3HT1gSZZQs7C10Sh0aLfoErpypn0fv0St0F2AGf/w++DFpLZDT2IGniUH/wHewe68vXF4MrieX19K4sCmDYvKBK0gDnXn2igoYIdDl5N+C8j7f/sRc8jAo9sfBiC4Bgqoma0v8lxamtmG9mZWmjbfX+U3ZWmC5ryXgetNwk/c+UUe9wk3aGH0DxnspSO5bSadjR7GbCoZGoYCOhPc5nBz7vGnCU5Mbsc4xN1tqsw6jWg1aoK4wSP7GBzpXYrjwt9jjeINOyGbxvz2ojNBsBEetRJSK+GwRNqjWC6Ww3mxWB7a49MqSTUcHV/N5rN56rk1nls5jN+0WY6banGc25Og+tcx/sRWmxSWtJrbRpJOwQyt7ScdPEFxtuRgnUFtPKe7vt9KjyvXxJh+vwR0HRRP69cWDmJR5NO3gqKSjcf/pPLlYVqCX8VHVuab8U8/pe4GKTUhnSCDX9idr+y4jhnUKBW6IdDR5KYs0fI/4Is1mZR0HJsf3x8hxr+ibzl7
+sidebar_class_name: "get api-method"
+info_path: ./voiceAPI/apiDocs/plivo-messaging-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieve Message"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/{message_uuid}/"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve the details of a specific message by its UUID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"message_uuid","in":"path","description":"Unique identifier for the message","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Details of the message
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"api_id"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Unique identifier for the API request"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message_uuid"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Unique identifier for the message"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"to"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Recipient phone number"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"from"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Sender phone number"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"text"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Message content"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Status of the message"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"api_id\": \"string\",\n  \"message_uuid\": \"string\",\n  \"to\": \"string\",\n  \"from\": \"string\",\n  \"text\": \"string\",\n  \"status\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"404"}
+        value={"404"}
+      >
+        <div>
+          
+          
+          Message not found
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

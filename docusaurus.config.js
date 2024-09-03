@@ -62,17 +62,18 @@ const config = {
         routeBasePath: 'voiceAPI',  // URL base path for voiceAPI
         sidebarPath: require.resolve('./sidebars.js'),  // Sidebar configuration
         editUrl: 'https://github.com/your-repo/your-project/edit/main/voiceAPI/',
+        docItemComponent: "@theme/ApiItem",
       },
     ],
     [
       'docusaurus-plugin-openapi-docs',
       {
-        id: 'api',
-        docsPluginId: 'classic', // This should match the docs plugin ID you're using
+        id: 'apiDocs',
+        docsPluginId: 'apiDocs', // This should match the docs plugin ID you're using
         config: {
           plivoApi: {
             specPath: './dummy.yaml',
-            outputDir: 'docs/api', // Where the generated docs will be saved
+            outputDir: './voiceAPI/apiDocs', // Where the generated docs will be saved
             sidebarOptions: {
               groupPathsBy: 'tag',
               categoryLinkSource: 'tag',
@@ -104,7 +105,7 @@ const config = {
               { to: '/docs/quickStart/NodejsQuickstart', label: 'SMS Concepts' },
               { to: '/docs/quickStart/PHPQuickstart', label: 'WhatsApp Concepts' },
               { to: '/docs/quickStart/GoQuickstart', label: 'Use Case Guides' },
-              { to: '/docs/quickStart/JavaQuickstart', label: 'API Reference' },
+              { to: '/docs/category/api-guides', label: 'API Reference' },
               { to: '/docs/quickStart/RubyQuickstart', label: 'XML Reference' },
               { to: '/docs/quickStart/DotNETQuickstart', label: '10DLC' },
               { to: '/docs/quickStart/NodejsQuickstart', label: 'Troubleshooting' },
@@ -118,7 +119,7 @@ const config = {
               { to: 'voiceAPI/category/quickstart-guides', label: 'Getting Started' },
               { to: '/voiceAPI/quickStart/NodejsQuickstart', label: 'Voice Concepts' },
               { to: '/voiceAPI/quickStart/PHPQuickstart', label: 'Use Case Guides' },
-              { to: '/voiceAPI/quickStart/GoQuickstart', label: 'API Reference' },
+              { to: '/voiceAPI/category/api-guides', label: 'API Reference' },
               { to: '/voiceAPI/quickStart/JavaQuickstart', label: 'XML Reference' },
               { to: '/voiceAPI/quickStart/RubyQuickstart', label: 'Client SDKs' },
               { to: '/voiceAPI/quickStart/DotNETQuickstart', label: 'Call Insights' },
