@@ -37,7 +37,7 @@ function Section({ title, cards }) {
   return (
     <section className={styles.features}>
       <div className={styles.main_container}>
-        <h1 className="">{title}</h1>
+        <h1 className={styles.home_sub_headings}>{title}</h1>
         <div className="row">
           {cards.map((card, idx) => (
             <Card key={idx} {...card} />

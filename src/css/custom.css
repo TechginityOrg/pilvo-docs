@@ -16,6 +16,7 @@
   --ifm-color-primary-hero: #F8F9FB;
   --ifm-color-primary-heading: #05006d;
   --ifm-color-secondary-heading: #333;
+  --ifm-card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -32,6 +33,7 @@
   --ifm-color-primary-hero: #333333;
   --ifm-color-primary-heading: #ffff;
   --ifm-color-secondary-heading: #fff;
+  --ifm-card-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -72,7 +74,7 @@ a {
   /* Remove underline */
 }
 
-h1, p{
+h1, h2,  p{
   font-family: "soleil", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
