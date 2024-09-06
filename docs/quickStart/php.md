@@ -1,7 +1,7 @@
 ---
 title: PHPQuickstart
 sidebar_position: 0
-slug: /php
+slug: /messaging/quickstart/php-server
 ---
 
 
@@ -14,9 +14,12 @@ import TabItem from '@theme/TabItem';
         # Get Started with PHP Using PHP Server
 
 
-## Sign up for a Plivo account
-
 When you [Sign up with your work email address](https://console.plivo.com/accounts/register/), we give you a free trial account and free credits to experiment with and learn about our services. You can [add a number](https://console.plivo.com/phone-numbers/search/) to your account to start testing the full range of our voice and SMS service features.
+
+
+## Sign up for a Plivo account {#c63b31aaf06a40baac469c41514defbd}
+
+
 
 Follow these steps to get a free trial account:
 

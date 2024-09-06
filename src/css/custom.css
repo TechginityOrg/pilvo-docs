@@ -58,6 +58,8 @@ h2 {
 
 p {
   color: var(--ifm-color-secondary-heading);
+  font-size: 0.875rem;
+  line-height: 1.86;
   display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -84,6 +86,19 @@ a:hover {
   text-decoration: none;
 }
 
+.navbar__title{
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.navbar__title::after {
+  content: ' | docs'; /* Add the additional text */
+  color: #333; /* Style for the additional text */
+  font-weight: 500;
+  font-size:1rem;
+}
+
+
 .navbar__more {
   border: 1px solid #ccc;
   /* Adjust the border color as needed */
@@ -100,11 +115,55 @@ a:hover {
   /* Adjust hover border color as needed */
 }
 
+
+/* Target the active sidebar item */
+.leftSidebar .menu__link--active {
+  background-color: #f1f5fa; /* Slight dark bluish background */
+  color: #05006d;
+  position: relative;
+}
+
+/* Add the dark blue vertical bar */
+.leftSidebar .menu__link--active::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 3px; /* Thickness of the vertical bar */
+  background-color: #05006d; /* Dark blue color */
+}
+
+/* Hover effect for sidebar items */
+.leftSidebar .menu__link {
+  position: relative;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Add background and vertical bar on hover */
+.leftSidebar .menu__link:hover {
+  background-color: #e9ebeb; /* Slightly lighter background on hover */
+}
+
+/* Add the gray vertical bar on hover */
+.leftSidebar .menu__link:hover::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 4px; /* Thickness of the vertical bar */
+  background-color: #b0bec5; /* Gray color */
+}
+
+
+
+
 /* Custom Tabs Container */
 .custom-tabs-container {
   display: flex;
   gap: 10px;
-  /* Adjust gap between tabs */
+  
 }
 
 /* Custom Tab Items */

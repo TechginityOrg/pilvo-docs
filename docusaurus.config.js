@@ -31,6 +31,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          sidebarCollapsible: false,
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           docItemComponent: "@theme/ApiItem",
@@ -61,6 +62,7 @@ const config = {
         path: 'voiceAPI',  // Path to your voiceAPI content
         routeBasePath: 'voiceAPI',  // URL base path for voiceAPI
         sidebarPath: require.resolve('./sidebars.js'),  // Sidebar configuration
+        sidebarCollapsible: false,
         editUrl: 'https://github.com/your-repo/your-project/edit/main/voiceAPI/',
         docItemComponent: "@theme/ApiItem",
       },
@@ -90,7 +92,7 @@ const config = {
     ({
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Plivo',
+        title: `plivo`,
         logo: {
           alt: 'My Site Logo',
           src: 'img/plivo-icon.png',
@@ -101,9 +103,9 @@ const config = {
             label: 'Messaging API',
             position: 'left',
             items: [
-              { to: '/docs/category/quickstart-guides', label: 'Getting Started' },
+              { to: '/docs/messaging/quickstart/php-server', label: 'Getting Started' },
               { to: '/docs/messaging/quickstart/node-expressjs', label: 'SMS Concepts' },
-              { to: '/docs/messaging/quickstart/php-server', label: 'WhatsApp Concepts' },
+              { to: '/docs/messaging/quickstart/ruby', label: 'WhatsApp Concepts' },
               { to: '/docs/messaging/quickstart/go-gin', label: 'Use Case Guides' },
               { to: '/docs/category/api-guides', label: 'API Reference' },
               { to: '/docs/messaging/quickstart/ruby-sinatra', label: 'XML Reference' },
@@ -116,9 +118,9 @@ const config = {
             label: 'Voice API',
             position: 'left',
             items: [
-              { to: 'voiceAPI/category/quickstart-guides', label: 'Getting Started' },
+              { to: 'voiceAPI/docs/voice/quickstart/php/', label: 'Getting Started' },
               { to: '/voiceAPI/docs/voice/quickstart/node-expressjs/', label: 'Voice Concepts' },
-              { to: '/voiceAPI/docs/voice/quickstart/php/', label: 'Use Case Guides' },
+              { to: '/voiceAPI/docs/voice/quickstart/usecase/', label: 'Use Case Guides' },
               { to: '/voiceAPI/category/api-guides', label: 'API Reference' },
               { to: '/voiceAPI/docs/voice/quickstart/ruby-sinatra/', label: 'XML Reference' },
               { to: '/voiceAPI/docs/voice/quickstart/java-spring/', label: 'Client SDKs' },

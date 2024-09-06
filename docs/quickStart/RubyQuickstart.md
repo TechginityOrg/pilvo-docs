@@ -1,7 +1,7 @@
 ---
 title: RubyQuickstart
 sidebar_position: 5
-slug: /rubyquickstart
+slug: /messaging/quickstart/ruby
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: NodejsQuickstart
 sidebar_position: 3
-slug: /node-expressjs
+slug: /messaging/quickstart/node-expressjs
 ---
 
 

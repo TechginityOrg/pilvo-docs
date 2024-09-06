@@ -1,7 +1,5 @@
 {
   "label": "QUICKSTART GUIDES",
-  "position": 1,
-  "link": {
-    "type": "generated-index"
-  }
+  "className": "leftSidebar",
+  "position": 1
 }
