@@ -3,7 +3,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: #F8F9FB;
+  background-color: var(--ifm-color-primary-hero);
 }
 
 .heroBanner::before,
@@ -51,7 +51,7 @@
 }
 
 .card {
-  background: #fff;
+  background: transparent;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;

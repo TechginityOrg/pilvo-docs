@@ -1,7 +1,11 @@
 ---
-sidebar_position: 1
-slug: /messaging/quickstart/node-expressjs
+title: NodejsQuickstart
+sidebar_position: 3
+slug: /node-expressjs
 ---
+
+
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -382,7 +386,7 @@ We illustrate [more than a dozen use cases](https://www.plivo.com/docs/messaging
 </TabItem>
       <TabItem value="Node.js & NestJS" label="Node.js & NestJS">
         # Node.js QuickStart
-        ## Get Started with Node.js Using the NestJS Framework
+        ## Sign up for a Plivo account
 
 When you [Sign up with your work email address](https://console.plivo.com/accounts/register/), we give you a free trial account and free credits to experiment with and learn about our services. You can [add a number](https://console.plivo.com/phone-numbers/search/) to your account to start testing the full range of our voice and SMS service features.
 
@@ -411,3 +415,4 @@ You can create and deploy a PHLO to send your first outbound SMS message with a 
 
       </TabItem>
     </Tabs>
+

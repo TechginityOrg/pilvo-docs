@@ -1,7 +1,10 @@
 ---
+title: GoQuickstart
 sidebar_position: 6
-slug: /messaging/quickstart/go-gin
+slug: /goquickstart
 ---
+
+
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -412,3 +415,4 @@ You can create and deploy a PHLO to send your first outbound SMS message with a 
 
       </TabItem>
     </Tabs>
+

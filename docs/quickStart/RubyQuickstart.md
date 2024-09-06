@@ -1,6 +1,14 @@
 ---
+title: RubyQuickstart
+sidebar_position: 5
+slug: /rubyquickstart
+---
+
+
+
+---
 sidebar_position: 3
-slug: /messaging/quickstart/ruby-sinatra
+slug: /docs/voice/quickstart/ruby-sinatra/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -412,3 +420,4 @@ You can create and deploy a PHLO to send your first outbound SMS message with a 
 
       </TabItem>
     </Tabs>
+

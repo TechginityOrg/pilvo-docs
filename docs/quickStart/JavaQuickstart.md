@@ -1,7 +1,11 @@
 ---
+title: JavaQuickstart
 sidebar_position: 4
-slug: /messaging/quickstart/JavaQuickstart
+slug: /javaQuickstart
 ---
+
+
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -411,3 +415,4 @@ You can create and deploy a PHLO to send your first outbound SMS message with a 
 
       </TabItem>
     </Tabs>
+
