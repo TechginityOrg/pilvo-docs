@@ -20,7 +20,9 @@ function Card({ title, description, link, imgSrc }) {
   return (
     <div className={clsx('col col--4', styles.card)}>
       <div className={styles.cardContent}>
+      <div className={styles.cardImgWrapper}>
         <img src={imgSrc} alt={title} className={styles.cardImg} />
+        </div>
         <div className={styles.cardText}>
           <h3>{title}</h3>
           <p>{description}</p>
@@ -34,8 +36,8 @@ function Card({ title, description, link, imgSrc }) {
 function Section({ title, cards }) {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <h2 className="text--center">{title}</h2>
+      <div className={styles.main_container}>
+        <h1 className="">{title}</h1>
         <div className="row">
           {cards.map((card, idx) => (
             <Card key={idx} {...card} />
@@ -51,7 +53,7 @@ export default function Home() {
 
   const sections = [
     {
-      title: 'Messaging API Platform',
+      title: 'Getting Started',
       cards: [
         {
           title: 'Messaging API Platform',
