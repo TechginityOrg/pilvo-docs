@@ -1,5 +1,5 @@
 ---
-title: GoQuickstart
+title: Go Quickstart
 sidebar_position: 6
 slug: /goquickstart
 ---

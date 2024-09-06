@@ -1,5 +1,5 @@
 ---
-title: PHPQuickstart
+title: PHP Quickstart
 sidebar_position: 0
 slug: /messaging/quickstart/php-server
 ---

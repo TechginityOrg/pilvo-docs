@@ -1,5 +1,5 @@
 ---
-title: JavaQuickstart
+title: Java Quickstart
 sidebar_position: 4
 slug: /javaQuickstart
 ---
