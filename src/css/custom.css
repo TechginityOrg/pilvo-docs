@@ -95,6 +95,7 @@ a:hover {
   font-size: 1.5rem;
   font-weight: 900;
 }
+
 .navbar__title::after {
   content: ' | docs'; /* Add the additional text */
   color: var(--ifm-color-logo-secondary); /* Style for the additional text */
@@ -119,6 +120,9 @@ a:hover {
   /* Adjust hover border color as needed */
 }
 
+.leftSidebar{
+  padding: 1.5rem;
+}
 
 /* Target the active sidebar item */
 .leftSidebar .menu__link--active {
