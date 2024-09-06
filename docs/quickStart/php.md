@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs className="custom-tabs-container">
       <TabItem value="PHP Server" label="PHP Server" default>
-        # PHP Quickstrart
+        # **G**et Started with PHP Using PHP Server
 
 
 ## Sign up for a Plivo account
