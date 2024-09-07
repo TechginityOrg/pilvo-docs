@@ -35,6 +35,7 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           docItemComponent: "@theme/ApiItem",
+          breadcrumbs: false,
         },
         blog: {
           showReadingTime: true,

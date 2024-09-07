@@ -13,12 +13,12 @@
 }
 
 .snippetBox {
-    width: 400px;
+    width: 500px;
     /* Increase width as needed */
     height: 100%;
     /* Set height to fill the available space */
     position: sticky;
-    top: 100px;
+    top: 60px;
     overflow-y: auto;
     /* Enable vertical scrolling */
 }
