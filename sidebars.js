@@ -51,11 +51,11 @@ const sidebars = {
       type: 'category',
       label: 'Quick Start',
       items: [
-        'quickStart/GoQuickstart',
-        'quickStart/JavaQuickstart',
+        'quickStart/goquickstart',
+        'quickStart/javaQuickstart',
         'quickStart/node-expressjs',
         'quickStart/php',
-        'quickStart/RubyQuickstart',
+        'quickStart/rubyquickstart',
       ],
     },
     {

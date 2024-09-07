@@ -1,23 +1,12 @@
 ---
-layout: two-column
-title: Call 
-description: Call
-sidebar_position: 4
-permalink: /docs/voice/api/call/
-codeUrl:
-  - code/apiReference/voice/
-page_name: Call
-categorization:
-  - voice
-nav:
-  - Prerequisites
-breadcrumb:
-  - link: /docs/
-    title: Home
-  - link: /docs/voice/api/call/
-    title: Call
-    selected: true
+hide_title: true
+hide_table_of_contents: true
 ---
+
+import CustomLayout from '@site/src/components/CustomLayout';
+
+<CustomLayout>
+
 # Call
 
 A `Call` object is created when an outbound call is initiated or when an inbound call is received. You can use a Call object to interact with ongoing calls, retrieve details about completed calls, and transfer ongoing calls, thereby building custom call flows.
@@ -691,3 +680,7 @@ HTTP Status Code: 202
 "api_id": "08c94608-58bd-11e1-86da-adf28403fe48"
 }
 ~~~
+
+
+
+</CustomLayout>

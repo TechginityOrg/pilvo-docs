@@ -1,3 +1,4 @@
+/* Default styles for larger screens */
 .customLayout {
     display: flex;
     justify-content: space-between;
@@ -7,13 +8,14 @@
 
 .content {
     flex: 1;
+    width: 55%;
     /* Take up the remaining space */
     padding-right: 2rem;
     /* Space between content and snippet box */
 }
 
 .snippetBox {
-    width: 500px;
+    width: 45%;
     /* Increase width as needed */
     height: 100%;
     /* Set height to fill the available space */
@@ -21,4 +23,43 @@
     top: 60px;
     overflow-y: auto;
     /* Enable vertical scrolling */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1200px) {
+    .content {
+        width: 55%;
+        padding-right: 1.5rem;
+    }
+    
+    .snippetBox {
+        width: 45%;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .snippetBox {
+        width: 100%;
+        position: relative;
+        top: 0;
+        height: auto;
+        overflow-y: visible;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .customLayout {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .snippetBox {
+        margin-top: 1.5rem;
+    }
 }

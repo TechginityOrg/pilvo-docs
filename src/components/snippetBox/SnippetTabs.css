@@ -1,8 +1,8 @@
 /* Set the height of the parent container to 100% */
 .snippet-tabs {
-    background-color: #2a2a3b;
+    background-color: #2A2A3C;
     color: #ffffff;
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -11,7 +11,7 @@
 
 .snippit-main{
     height: 100%;
-    max-height: 90vh;   
+    max-height: 100vh;   
 }
 
 /* Make the tabs container flexible */
@@ -36,7 +36,7 @@
     padding: 10px 15px;
     border: none;
     cursor: pointer;
-    background-color: #444;
+    background-color: #2A2A3C;
     color: #ffffff;
     margin-right: 5px;
     border-radius: 4px 4px 0 0;
@@ -46,16 +46,17 @@
 /* Active tab styling */
 .tab-button.active {
     background-color: #2a2a3b;
-    border-bottom: 1px solid #2a2a3b;
+    border-bottom: 2px solid #4caf50;
     color: #4caf50;
+    z-index: 3;
 }
 
 /* Ensure snippet content takes remaining space */
 .snippet-content {
     flex-grow: 1;
-    border-top: 1px solid #4caf50;
+    border-top: 1px solid #fff;
     background-color: #2a2a3b;
-    padding: 16px;
+    padding: 16px 0;
     border-radius: 0 0 8px 8px;
     color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
@@ -64,12 +65,14 @@
     white-space: nowrap;
     box-sizing: border-box;
     position: relative;
+    top: -1px; /* Adjusts the position slightly above */
 }
+
 
 /* Ensure pre element fills the height */
 pre {
     margin: 0;
-    background-color: #2a2a3b;
+    background-color: #212130;
     color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
     overflow: auto;
@@ -99,6 +102,7 @@ pre code {
     padding: 10px;
     flex-grow: 1;
     font-size: 14px;
+    line-height: 0.8; /* Adjust this value to reduce line spacing */
 }
 
 /* Styling specific parts of the code */
@@ -149,6 +153,8 @@ pre code .number {
 /* Version Tabs Styling */
 .version-tabs {
     display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
     margin-bottom: 10px; /* Add some space between version and language tabs */
 }
 
@@ -156,17 +162,17 @@ pre code .number {
     padding: 8px 12px;
     border: none;
     cursor: pointer;
-    background-color: #444; /* Slightly darker background for version tabs */
-    color: #ffffff;
+    background-color: #3E3D4E; /* Slightly darker background for version tabs */
+    color: #878792;
     margin-right: 5px;
     border-radius: 4px 4px 0 0;
     font-weight: bold; /* Make version tab text bold */
 }
 
 .version-tab-button.active {
-    background-color: #2a2a3b;
+    background-color: #3E3D4E;
     border-bottom: 1px solid #2a2a3b;
-    color: #4caf50;
+    color: #ffffff;
 }
 
 /* Response Section Styling */
@@ -178,11 +184,13 @@ pre code .number {
 
 .response-section h3 {
     margin-bottom: 5px;
-    color: #4caf50; /* Green color for section headers */
+    padding: 10px;
+    font-size: 0.873rem; /* Green color for section headers */
 }
 
 .response-section p {
     margin-bottom: 10px;
+    padding: 10px;
     color: #ffffff; /* White text for regular content */
 }
 
@@ -196,6 +204,16 @@ pre code .number {
 .rating-section h3 {
     margin-bottom: 5px;
     color: #4caf50; /* Green color for section headers */
+}
+
+.response-section pre code{
+    display: block;
+    white-space: pre;
+    word-wrap: normal;
+    padding: 10px;
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 1.2; /* Adjust this value to reduce line spacing */
 }
 
 .stars {
@@ -213,3 +231,4 @@ pre code .number {
 .star.active {
     color: #ffcc00; /* Change color on hover or when active */
 }
+
