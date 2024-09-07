@@ -1,7 +1,7 @@
 ---
 title: Go Quickstart
 sidebar_position: 6
-slug: /goquickstart
+slug: /messaging/quickstart/go-gin
 ---
 
 
