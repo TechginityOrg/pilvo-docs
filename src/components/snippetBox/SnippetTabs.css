@@ -1,164 +1,215 @@
+/* Set the height of the parent container to 100% */
 .snippet-tabs {
     background-color: #2a2a3b;
-    /* Dark background */
     color: #ffffff;
-    /* White text */
-    border-radius: 8px;
-    /* Rounded corners */
     padding: 10px;
-    height: 100%;
-    /* Ensure snippet-tabs takes full height of parent */
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
-    /* Include padding in the height calculation */
     overflow-y: auto;
-    /* Enable vertical scrolling */
-    max-height: 100vh;
-    /* Ensure it doesn't exceed viewport height */
 }
 
+.snippit-main{
+    height: 100%;
+    max-height: 90vh;   
+}
 
+/* Make the tabs container flexible */
 .tabs {
     display: flex;
     overflow-x: auto;
-    /* Allow horizontal scrolling */
     overflow-y: hidden;
-    /* Prevent vertical scrolling */
     white-space: nowrap;
-    /* Prevent wrapping */
 }
 
 .tabs::-webkit-scrollbar {
     display: none;
-    /* Hide scrollbars in WebKit browsers */
 }
 
 .tabs {
     -ms-overflow-style: none;
-    /* Hide scrollbars in Internet Explorer and Edge */
     scrollbar-width: none;
-    /* Hide scrollbars in Firefox */
 }
 
+/* Ensure tab buttons take space */
 .tab-button {
     padding: 10px 15px;
     border: none;
     cursor: pointer;
     background-color: #444;
-    /* Darker background for inactive tabs */
     color: #ffffff;
-    /* White text for inactive tabs */
     margin-right: 5px;
     border-radius: 4px 4px 0 0;
     flex-shrink: 0;
-    /* Prevent shrinking */
 }
 
+/* Active tab styling */
 .tab-button.active {
     background-color: #2a2a3b;
-    /* Same as snippet background for active tab */
     border-bottom: 1px solid #2a2a3b;
-    /* Remove border bottom for active tab */
     color: #4caf50;
-    /* Green text for active tab */
 }
 
+/* Ensure snippet content takes remaining space */
 .snippet-content {
+    flex-grow: 1;
     border-top: 1px solid #4caf50;
-    /* Green border at the top of the snippet content */
     background-color: #2a2a3b;
-    /* Dark background for the snippet content */
     padding: 16px;
     border-radius: 0 0 8px 8px;
     color: #ffffff;
-    /* White text */
     font-family: 'Courier New', Courier, monospace;
-    /* Monospace font for code */
     overflow-x: auto;
-    /* Allow horizontal scrolling */
     overflow-y: auto;
-    /* Enable vertical scrolling */
     white-space: nowrap;
-    /* Prevent line breaks */
-    max-height: calc(100vh - 50px);
-    /* Adjust height based on needs */
     box-sizing: border-box;
-    /* Include padding in the height calculation */
     position: relative;
-    /* Allow positioning for copy button */
-    font-family: 'Courier New', Courier, monospace;
 }
 
-.snippet-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.copy-button {
-    padding: 5px 10px;
-    background-color: #4caf50;
-    /* Green background for the button */
-    color: #ffffff;
-    /* White text */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.copy-button:hover {
-    background-color: #388e3c;
-    /* Darker green on hover */
-}
-
-.copy-success {
-    color: #28a745;
-    /* Green text for copy success message */
-    font-size: 14px;
-    margin-left: 10px;
-}
-
+/* Ensure pre element fills the height */
 pre {
     margin: 0;
     background-color: #2a2a3b;
-    /* Ensure code block background matches */
     color: #ffffff;
-    /* White text for code */
     font-family: 'Courier New', Courier, monospace;
-    /* Monospace font for code */
     overflow: auto;
-    /* Allow internal scrollbars */
     white-space: pre;
-    /* Preserve formatting */
     word-wrap: normal;
-    /* Prevent code from wrapping */
     height: 100%;
-    /* Ensure height is 100% of parent */
-    font-family: 'Courier New', Courier, monospace;
-    text-align: left;
-    line-height: 1;
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    border-radius: 4px;
+}
+
+/* Line Number Styling */
+.line-number {
+  display: inline-block;
+  width: 2em;
+  text-align: right;
+  margin-right: 1em;
+  color: #6272a4; /* Adjust color as needed */
+  user-select: none;
 }
 
 pre code {
     display: block;
     white-space: pre;
-    /* Preserve formatting */
     word-wrap: normal;
-    /* Prevent code from wrapping */
+    padding: 10px;
+    flex-grow: 1;
+    font-size: 14px;
 }
 
-/* Highlighting specific keywords in the code */
+/* Styling specific parts of the code */
 pre code .keyword {
     color: #ff79c6;
-    /* Pink color for keywords */
 }
 
 pre code .string {
     color: #f1fa8c;
-    /* Yellow color for strings */
 }
 
 pre code .comment {
     color: #6272a4;
-    /* Purple color for comments */
+}
+
+/* Styling for built-in functions */
+pre code .built_in {
+  color: #89b4fa;
+}
+
+/* Styling for numbers */
+pre code .number {
+  color: #f8bd96;
+}
+
+/* Button for copying code */
+.copy-button {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px; /* Add some space between copy button and copy success */
+}
+
+.copy-button:hover {
+    background-color: #388e3c;
+}
+
+.copy-success {
+    color: #28a745;
+    font-size: 14px;
+    /* margin-left: 10px; */ /* Remove margin for better spacing */
+    display: inline-block; /* Allow wrapping for copy success */
+}
+
+/* Version Tabs Styling */
+.version-tabs {
+    display: flex;
+    margin-bottom: 10px; /* Add some space between version and language tabs */
+}
+
+.version-tab-button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background-color: #444; /* Slightly darker background for version tabs */
+    color: #ffffff;
+    margin-right: 5px;
+    border-radius: 4px 4px 0 0;
+    font-weight: bold; /* Make version tab text bold */
+}
+
+.version-tab-button.active {
+    background-color: #2a2a3b;
+    border-bottom: 1px solid #2a2a3b;
+    color: #4caf50;
+}
+
+/* Response Section Styling */
+.response-section {
+    margin-top: 20px;
+    border-top: 1px solid #444; /* Light separator line */
+    padding-top: 15px;
+}
+
+.response-section h3 {
+    margin-bottom: 5px;
+    color: #4caf50; /* Green color for section headers */
+}
+
+.response-section p {
+    margin-bottom: 10px;
+    color: #ffffff; /* White text for regular content */
+}
+
+/* Rating Section Styling */
+.rating-section {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+.rating-section h3 {
+    margin-bottom: 5px;
+    color: #4caf50; /* Green color for section headers */
+}
+
+.stars {
+    display: inline-block;
+    margin-top: 5px; /* Add some space above the stars */
+}
+
+.star {
+    font-size: 20px;
+    color: #ccc; /* Default star color */
+    cursor: pointer; /* Make stars clickable if you want to implement rating functionality */
+}
+
+.star:hover,
+.star.active {
+    color: #ffcc00; /* Change color on hover or when active */
 }
