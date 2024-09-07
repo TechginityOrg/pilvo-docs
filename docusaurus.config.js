@@ -55,37 +55,37 @@ const config = {
       }),
     ],
   ],
-  plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'voiceAPI',  // An identifier for this docs plugin instance
-        path: 'voiceAPI',  // Path to your voiceAPI content
-        routeBasePath: 'voiceAPI',  // URL base path for voiceAPI
-        sidebarPath: require.resolve('./sidebars.js'),  // Sidebar configuration
-        sidebarCollapsible: false,
-        editUrl: 'https://github.com/your-repo/your-project/edit/main/voiceAPI/',
-        docItemComponent: "@theme/ApiItem",
-      },
-    ],
-    [
-      'docusaurus-plugin-openapi-docs',
-      {
-        id: 'apiDocs',
-        docsPluginId: 'apiDocs', // This should match the docs plugin ID you're using
-        config: {
-          plivoApi: {
-            specPath: './dummy.yaml',
-            outputDir: './voiceAPI/apiDocs', // Where the generated docs will be saved
-            sidebarOptions: {
-              groupPathsBy: 'tag',
-              categoryLinkSource: 'tag',
-            },
-          },
-        },
-      },
-    ],
-  ],
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-content-docs',
+  //     {
+  //       id: 'voiceAPI',  // An identifier for this docs plugin instance
+  //       path: 'voiceAPI',  // Path to your voiceAPI content
+  //       routeBasePath: 'voiceAPI',  // URL base path for voiceAPI
+  //       sidebarPath: require.resolve('./sidebars.js'),  // Sidebar configuration
+  //       sidebarCollapsible: false,
+  //       editUrl: 'https://github.com/your-repo/your-project/edit/main/voiceAPI/',
+  //       docItemComponent: "@theme/ApiItem",
+  //     },
+  //   ],
+  //   [
+  //     'docusaurus-plugin-openapi-docs',
+  //     {
+  //       id: 'apiDocs',
+  //       docsPluginId: 'apiDocs', // This should match the docs plugin ID you're using
+  //       config: {
+  //         plivoApi: {
+  //           specPath: './dummy.yaml',
+  //           outputDir: './voiceAPI/apiDocs', // Where the generated docs will be saved
+  //           sidebarOptions: {
+  //             groupPathsBy: 'tag',
+  //             categoryLinkSource: 'tag',
+  //           },
+  //         },
+  //       },
+  //     },
+  //   ],
+  // ],
   themes: ["docusaurus-theme-openapi-docs"],
 
   themeConfig:
@@ -108,7 +108,7 @@ const config = {
               { to: '/docs/messaging/quickstart/node-expressjs', label: 'SMS Concepts' },
               { to: '/docs/messaging/quickstart/ruby', label: 'WhatsApp Concepts' },
               { to: '/docs/messaging/quickstart/go-gin', label: 'Use Case Guides' },
-              { to: '/docs/category/api-guides', label: 'API Reference' },
+              { to: '/docs/messaging/api/overview/', label: 'API Reference' },
               { to: '/docs/messaging/quickstart/ruby-sinatra', label: 'XML Reference' },
               { to: '/docs/messaging/quickstart/dotnet-core', label: '10DLC' },
               { to: '/docs/messaging/quickstart/node-expressjs', label: 'Troubleshooting' },
@@ -119,14 +119,14 @@ const config = {
             label: 'Voice API',
             position: 'left',
             items: [
-              { to: 'voiceAPI/docs/voice/quickstart/php/', label: 'Getting Started' },
-              { to: '/voiceAPI/docs/voice/quickstart/node-expressjs/', label: 'Voice Concepts' },
-              { to: '/voiceAPI/docs/voice/quickstart/usecase/', label: 'Use Case Guides' },
-              { to: '/voiceAPI/category/api-guides', label: 'API Reference' },
-              { to: '/voiceAPI/docs/voice/quickstart/ruby-sinatra/', label: 'XML Reference' },
-              { to: '/voiceAPI/docs/voice/quickstart/java-spring/', label: 'Client SDKs' },
-              { to: '/voiceAPI/docs/voice/quickstart/dotnet-core/', label: 'Call Insights' },
-              { to: '/voiceAPI/docs/voice/quickstart/go-gin/', label: 'Troubleshooting' },
+              { to: '/docs/voice/quickstart/php/', label: 'Getting Started' },
+              { to: '/docs/voice/quickstart/node-expressjs/', label: 'Voice Concepts' },
+              { to: '/docs/voice/quickstart/usecase/', label: 'Use Case Guides' },
+              { to: '/docs/voice/api/overview/', label: 'API Reference' },
+              { to: '/docs/voice/quickstart/ruby-sinatra/', label: 'XML Reference' },
+              { to: '/docs/voice/quickstart/java-spring/', label: 'Client SDKs' },
+              { to: '/docs/voice/quickstart/dotnet-core/', label: 'Call Insights' },
+              { to: '/docs/voice/quickstart/go-gin/', label: 'Troubleshooting' },
             ],
           },
           {

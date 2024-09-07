@@ -1,13 +1,14 @@
 ---
-sidebar_position: 2
-slug: /docs/voice/quickstart/php/
+sidebar_position: 3
+slug: /voice/quickstart/ruby-sinatra/
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs className="custom-tabs-container">
-      <TabItem value="PHP Server" label="PHP Server" default>
-        # PHP Quickstart
+      <TabItem value="Ruby Sinatra" label="Ruby Sinatra" default>
+        # Ruby Sinatra QuickStart
 
 
 ## Sign up for a Plivo account
@@ -380,8 +381,8 @@ We illustrate [more than a dozen use cases](https://www.plivo.com/docs/messaging
   </TabItem>
 </Tabs>
 </TabItem>
-      <TabItem value="PHP Laravel" label="PHP Laravel">
-        # PHP Larval Quickstrart
+      <TabItem value="Ruby on Rails" label="Ruby on Rails">
+        # Ruby on Rails QuickStart
         ## Sign up for a Plivo account
 
 When you [Sign up with your work email address](https://console.plivo.com/accounts/register/), we give you a free trial account and free credits to experiment with and learn about our services. You can [add a number](https://console.plivo.com/phone-numbers/search/) to your account to start testing the full range of our voice and SMS service features.

@@ -1,0 +1,12 @@
+{
+  "label": "QuickStart Guides",
+  "className": "leftSidebar",
+  "position": 6,
+  "customProps": {
+    "hidden": true
+  },
+  "link": {
+    "type": "generated-index"
+  },
+  "collapsible": true
+}
