@@ -1,13 +1,13 @@
 ---
-sidebar_position: 4
-slug: /docs/voice/quickstart/java-spring/
+sidebar_position: 2
+slug: /voice/quickstart/php/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs className="custom-tabs-container">
-      <TabItem value="Java & Spring" label="Java & Spring" default>
-        # Java & Spring Core QuickStart
+      <TabItem value="PHP Server" label="PHP Server" default>
+        # PHP Quickstart
 
 
 ## Sign up for a Plivo account
@@ -380,8 +380,8 @@ We illustrate [more than a dozen use cases](https://www.plivo.com/docs/messaging
   </TabItem>
 </Tabs>
 </TabItem>
-      <TabItem value="Java & Spark" label="Java & Spark">
-        # Java & Spark Framework QuickStart
+      <TabItem value="PHP Laravel" label="PHP Laravel">
+        # PHP Larval Quickstrart
         ## Sign up for a Plivo account
 
 When you [Sign up with your work email address](https://console.plivo.com/accounts/register/), we give you a free trial account and free credits to experiment with and learn about our services. You can [add a number](https://console.plivo.com/phone-numbers/search/) to your account to start testing the full range of our voice and SMS service features.

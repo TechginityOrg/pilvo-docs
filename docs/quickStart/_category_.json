@@ -1,3 +1,5 @@
-{"position":1, "label":"Quickstart", 
-"className": "leftSidebar"
+{
+    "position": 1,
+    "label": "Quickstart",
+    "className": "leftSidebar"
 }

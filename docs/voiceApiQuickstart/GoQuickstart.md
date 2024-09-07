@@ -1,13 +1,14 @@
 ---
-sidebar_position: 5
-slug: /docs/voice/quickstart/dotnet-core/
+sidebar_position: 6
+slug: /voice/quickstart/go-gin/
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs className="custom-tabs-container">
-      <TabItem value=".NET Core" label=".NET Core" default>
-        # .NET Core QuickStart
+      <TabItem value="Go & Gin" label="Go & Gin" default>
+        # Go & Gin QuickStart
 
 
 ## Sign up for a Plivo account
@@ -380,8 +381,8 @@ We illustrate [more than a dozen use cases](https://www.plivo.com/docs/messaging
   </TabItem>
 </Tabs>
 </TabItem>
-      <TabItem value=".NET Framework" label=".NET Framework">
-        # .NET Framework QuickStart
+      <TabItem value="Go & Martini" label="Go & Martini">
+        # Go & Martini QuickStart
         ## Sign up for a Plivo account
 
 When you [Sign up with your work email address](https://console.plivo.com/accounts/register/), we give you a free trial account and free credits to experiment with and learn about our services. You can [add a number](https://console.plivo.com/phone-numbers/search/) to your account to start testing the full range of our voice and SMS service features.
