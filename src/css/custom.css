@@ -120,20 +120,20 @@ a:hover {
   /* Adjust hover border color as needed */
 }
 
-.leftSidebar{
-  padding: 1.5rem;
+.menu{
+  margin: 1rem;
   font-size: 0.875rem;
 }
 
 /* Target the active sidebar item */
-.leftSidebar .menu__link--active {
+ .menu__link--active {
   background-color: #f1f5fa; /* Slight dark bluish background */
   color: #05006d;
   position: relative;
 }
 
 /* Add the dark blue vertical bar */
-.leftSidebar .menu__link--active::before {
+ .menu__link--active::before {
   content: '';
   position: absolute;
   right: 0;
@@ -144,18 +144,18 @@ a:hover {
 }
 
 /* Hover effect for sidebar items */
-.leftSidebar .menu__link {
+ .menu__link {
   position: relative;
   transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
 /* Add background and vertical bar on hover */
-.leftSidebar .menu__link:hover {
+ .menu__link:hover {
   background-color: #e9ebeb; /* Slightly lighter background on hover */
 }
 
 /* Add the gray vertical bar on hover */
-.leftSidebar .menu__link:hover::after {
+.menu__link:hover::after {
   content: '';
   position: absolute;
   right: 0;
@@ -164,8 +164,6 @@ a:hover {
   width: 4px; /* Thickness of the vertical bar */
   background-color: #b0bec5; /* Gray color */
 }
-
-
 
 
 /* Custom Tabs Container */
