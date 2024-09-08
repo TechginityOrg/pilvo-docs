@@ -7,22 +7,19 @@ const sidebars = {
       type: 'category',
       label: 'Quick Start',
       items: [
-        'quickStart/GoQuickstart',
-        'quickStart/javaQuickstart',
-        'quickStart/node-expressjs',
         'quickStart/php',
-        'quickStart/rubyquickstart',
+        'quickStart/RubyQuickstart',
+        'quickStart/node-expressjs',
+        'quickStart/JavaQuickstart',
+        'quickStart/GoQuickstart',
       ],
     },
     {
       type: 'category',
-      label: 'API Docs',
+      label: 'Migration Guide',
       items: [
-        'apiDocs/list-all-messages.api',
-        'apiDocs/list-mms-media',
-        'apiDocs/plivo-message-api',
-        'apiDocs/retrieve-message',
-        'apiDocs/send-message',
+        'migration/twilioToPlivo',
+        'migration/zipwhipToPlivo'
       ],
     },
 
@@ -32,26 +29,41 @@ const sidebars = {
       type: 'category',
       label: 'Quick Start',
       items: [
-        'voiceApiQuickstart/DotNETQuickstart',
-        'voiceApiQuickstart/GoQuickstart',
-        'voiceApiQuickstart/JavaQuickstart',
-        'voiceApiQuickstart/NodejsQuickstart',
         'voiceApiQuickstart/PHPQuickstart',
         'voiceApiQuickstart/RubyQuickstart',
+        'voiceApiQuickstart/NodejsQuickstart',
+        'voiceApiQuickstart/DotNETQuickstart',
+        'voiceApiQuickstart/JavaQuickstart',
+        'voiceApiQuickstart/GoQuickstart',
       ],
-    },
+    }
+  ],
+  apiDocs: [
     {
       type: 'category',
       label: 'API Docs',
       items: [
+        'apiDocs/plivo-message-api',
+        'apiDocs/list-all-messages.api',
+        'apiDocs/list-mms-media',
+        'apiDocs/retrieve-message',
+        'apiDocs/send-message',
+      ],
+    }
+  ],
+  voiceApiDocs: [
+    {
+      type: 'category',
+      label: 'API Docs',
+      items: [
+        'VoiceApiDocs/plivo-message-api.info',
         'VoiceApiDocs/call',
         'VoiceApiDocs/conference',
-        'VoiceApiDocs/plivo-message-api.info',
         'VoiceApiDocs/request',
         'VoiceApiDocs/response',
       ],
     },
-  ],
+  ]
 };
 
 export default sidebars;

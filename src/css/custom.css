@@ -45,10 +45,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.main_title{
+.main_title {
   font-size: 2.5rem;
   line-height: 1.5;
-  font-weight:500;
+  font-weight: 500;
 }
 
 h1 {
@@ -69,12 +69,11 @@ p {
   font-size: 0.875rem;
   line-height: 1.86;
   display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    font-weight: 400;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
 }
 
 
@@ -85,7 +84,9 @@ a {
   /* Remove underline */
 }
 
-h1, h2,  p{
+h1,
+h2,
+p {
   font-family: "soleil", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
@@ -95,17 +96,19 @@ a:hover {
   text-decoration: none;
 }
 
-.navbar__title{
+.navbar__title {
   color: var(--ifm-color-logo);
   font-size: 1.5rem;
   font-weight: 900;
 }
 
 .navbar__title::after {
-  content: ' | docs'; /* Add the additional text */
-  color: var(--ifm-color-logo-secondary); /* Style for the additional text */
+  content: ' | docs';
+  /* Add the additional text */
+  color: var(--ifm-color-logo-secondary);
+  /* Style for the additional text */
   font-weight: 500;
-  font-size:1rem;
+  font-size: 1rem;
 }
 
 
@@ -125,38 +128,43 @@ a:hover {
   /* Adjust hover border color as needed */
 }
 
-.menu{
+.menu {
   margin: 1rem;
   font-size: 0.875rem;
 }
 
 /* Target the active sidebar item */
- .menu__link--active {
-  background-color: #f1f5fa; /* Slight dark bluish background */
+.menu__link--active {
+  background-color: #f1f5fa;
+  /* Slight dark bluish background */
   color: #05006d;
   position: relative;
 }
 
 /* Add the dark blue vertical bar */
- .menu__link--active::before {
+.menu__link--active::before {
   content: '';
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
-  width: 3px; /* Thickness of the vertical bar */
-  background-color: #05006d; /* Dark blue color */
+  width: 3px;
+  /* Thickness of the vertical bar */
+  background-color: #05006d;
+  /* Dark blue color */
 }
 
 /* Hover effect for sidebar items */
- .menu__link {
+.menu__link {
   position: relative;
-  transition: background-color 0.3s; /* Smooth transition for background color */
+  transition: background-color 0.3s;
+  /* Smooth transition for background color */
 }
 
 /* Add background and vertical bar on hover */
- .menu__link:hover {
-  background-color: #e9ebeb; /* Slightly lighter background on hover */
+.menu__link:hover {
+  background-color: #e9ebeb;
+  /* Slightly lighter background on hover */
 }
 
 /* Add the gray vertical bar on hover */
@@ -166,8 +174,10 @@ a:hover {
   right: 0;
   top: 0;
   height: 100%;
-  width: 4px; /* Thickness of the vertical bar */
-  background-color: #b0bec5; /* Gray color */
+  width: 4px;
+  /* Thickness of the vertical bar */
+  background-color: #b0bec5;
+  /* Gray color */
 }
 
 
@@ -175,7 +185,7 @@ a:hover {
 .custom-tabs-container {
   display: flex;
   gap: 10px;
-  
+
 }
 
 /* Custom Tab Items */
@@ -226,6 +236,7 @@ html {
 }
 
 
+
 .api-container {
   display: flex;
   align-items: center;
@@ -270,4 +281,16 @@ html {
 
 .notice-box-response p {
   margin: 0; /* Reset default paragraph margin */
+
+.helpfull-value {
+  display: none;
+}
+
+.comparison-table {
+  table-layout: fixed;
+}
+
+.comparison-table td {
+  width: 50% !important;
+
 }
