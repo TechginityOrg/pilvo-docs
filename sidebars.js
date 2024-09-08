@@ -8,9 +8,9 @@ const sidebars = {
       label: 'Quick Start',
       items: [
         'quickStart/php',
-        'quickStart/RubyQuickstart',
+        'quickStart/rubyquickstart',
         'quickStart/node-expressjs',
-        'quickStart/JavaQuickstart',
+        'quickStart/javaQuickstart',
         'quickStart/GoQuickstart',
       ],
     },
@@ -44,7 +44,7 @@ const sidebars = {
       label: 'API Docs',
       items: [
         'apiDocs/plivo-message-api',
-        'apiDocs/list-all-messages.api',
+        'apiDocs/list-all-messages-api',
         'apiDocs/list-mms-media',
         'apiDocs/retrieve-message',
         'apiDocs/send-message',

@@ -1,221 +1,123 @@
 ---
-id: list-mms-media
-title: "List MMS Media"
-description: "Lists the media files sent or received with an MMS message."
-sidebar_label: "List MMS Media"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVcFu4zYQ/ZXBnFpAsJIedXPRRWt03QZr7ykJAoYaWdxIpMIZOTUEAf2N/l6/pBhKznodH7KoLxaHwzePTzNPA5bENrpOXPBY4EfHwiA1QUulM1C5hhiYvECIEMmS21MJL05qMB7W6w20xGx2tMAMQ0fRKNKqxAIbx7Juea1AmKGYHWNxi+v1Bu8z7Ew0LQlFDQ7oTUtY4Az20PeuxAydcuqM1JhhpOfeRSqxkNhTdkZ8WxP03j33BK4kL65yFCFU6S5nNNnW1BosBpRDp1VZovM7HMd7LcNd8Eys+z9dXenft6U2vbXEXPVNc4BIEh2pJlpIr6xFT8UzzME6I0fZLhCywQt50VKm6xpnk4j5F9Z6w1u+4fELWcEMu6iSi5vYpqoPqepJsonRHFRLoZbfC+LKt/J8l+RfFVjgmM2ofWzeB/v500eQACYJfQlvVuxhgnoP5Hq1/gCadpHh60+pSh20f3eU1NHuKzAfTltzzFNX59pMFPfHJk73w1qk4yLPTecWXeP2YWFDm++v86W1ofeSD6aX+mFCSZj5G8Y3eg42602uraI1nCUgX3bBeUFtVOerkK7upKHXIzMiLG9WF2WYspY3K+iZGH7bbm9gT/GRwfgSWIwvTSynOIuRnsGGklhfR2ueCJwAGdY3XYUIh9DrjvNCu2iEwIa27f3cwawbQZNiQlnANgCT7SNNQZ1pSo4TQNezmBm80PScoso27CkmVpvFnb/zq0oB/v37n0jQhPDk/C7xSZUap361+eV3zhJBazxUzqcRbcEIuD83up3B0pcxuHJaqAA/x/DCFDWQ6vwRhApQ4Wwfo8IqPxf8sYuUm2PYX0/nNTRdItUHE+l4gkowDI0RYkm5De2MPSzuPGY452CB14srbfAusLQmjf9sjWrNyTiOhvrNyx2+msj/NPF5lIT+krxrjPNKZ57caRhusTjz6SMlNfY6sGjOMDwaps+xGUcNP/cUD1jc3me4N9GZR23a2wFLx/pcYlGZhs99/fRaP3yavwA/wve4/cX7HL3RqzPuTdPrCjN8osP5V2i8HzOsyZQUE+EpZWktdXJy+I1x64y+esmvH7Y4jv8BDEGRww==
-sidebar_class_name: "get api-method"
-info_path: ./voiceAPI/apiDocs/plivo-message-api
-custom_edit_url: null
+sidebar_label: "List MMS Media"
 slug: /messaging/api/message/list-mms-media
+sidebar_position: 3
 ---
 
-import ApiTabs from "@theme/ApiTabs";
-import DiscriminatorTabs from "@theme/DiscriminatorTabs";
-import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
-import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
-import MimeTabs from "@theme/MimeTabs";
-import ParamsItem from "@theme/ParamsItem";
-import ResponseSamples from "@theme/ResponseSamples";
-import SchemaItem from "@theme/SchemaItem";
-import SchemaTabs from "@theme/SchemaTabs";
-import Heading from "@theme/Heading";
-import OperationTabs from "@theme/OperationTabs";
-import TabItem from "@theme/TabItem";
+import CustomLayout from '@site/src/components/CustomLayout';
 
-<Heading
-  as={"h1"}
-  className={"openapi__heading"}
-  children={"List MMS Media"}
->
-</Heading>
+<CustomLayout>
+  ## List MMS Media
 
-<MethodEndpoint
-  method={"get"}
-  path={"/{message_uuid}/Media/"}
->
-  
-</MethodEndpoint>
+  This API retrieves a list of Message Detail Records (MDR) based on a filter criteria over the last 90 days.
 
-
-
-Lists the media files sent or received with an MMS message.
-
-<Heading
-  id={"request"}
-  as={"h2"}
-  className={"openapi-tabs__heading"}
-  children={"Request"}
->
-</Heading>
-
-<details
-  style={{"marginBottom":"1rem"}}
-  className={"openapi-markdown__details"}
-  data-collapsed={false}
-  open={true}
->
-  <summary
-    style={{}}
-  >
-    <h3
-      className={"openapi-markdown__details-summary-header-params"}
-    >
-      Path Parameters
-    </h3>
-  </summary><div>
-    <ul>
-      <ParamsItem
-        className={"paramsItem"}
-        param={{"name":"message_uuid","in":"path","required":true,"description":"The unique identifier of the MMS message.","schema":{"type":"string"}}}
-      >
-        
-      </ParamsItem>
-    </ul>
-  </div>
-</details><div>
-  <div>
-    <ApiTabs
-      label={undefined}
-      id={undefined}
-    >
-      <TabItem
-        label={"200"}
-        value={"200"}
-      >
-        <div>
-          
-          
-          Successfully retrieved the list of media files associated with the MMS message.
-          
-          
-        </div><div>
-          <MimeTabs
-            className={"openapi-tabs__mime"}
-            schemaType={"response"}
-          >
-            <TabItem
-              label={"application/json"}
-              value={"application/json"}
-            >
-              <SchemaTabs
-                className={"openapi-tabs__schema"}
-              >
-                <TabItem
-                  label={"Schema"}
-                  value={"Schema"}
-                >
-                  <details
-                    style={{}}
-                    className={"openapi-markdown__details response"}
-                    data-collapsed={false}
-                    open={true}
-                  >
-                    <summary
-                      style={{}}
-                      className={"openapi-markdown__details-summary-response"}
-                    >
-                      <strong>
-                        Schema
-                      </strong>
-                    </summary><div
-                      style={{"textAlign":"left","marginLeft":"1rem"}}
-                    >
-                      
-                    </div><ul
-                      style={{"marginLeft":"1rem"}}
-                    >
-                      <SchemaItem
-                        collapsible={true}
-                        className={"schemaItem"}
-                      >
-                        <details
-                          style={{}}
-                          className={"openapi-markdown__details"}
-                        >
-                          <summary
-                            style={{}}
-                          >
-                            <span
-                              className={"openapi-schema__container"}
-                            >
-                              <strong
-                                className={"openapi-schema__property"}
-                              >
-                                media_files
-                              </strong><span
-                                className={"openapi-schema__name"}
-                              >
-                                 object[]
-                              </span>
-                            </span>
-                          </summary><div
-                            style={{"marginLeft":"1rem"}}
-                          >
-                            <li>
-                              <div
-                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
-                              >
-                                Array [
-                              </div>
-                            </li><SchemaItem
-                              collapsible={false}
-                              name={"media_id"}
-                              required={false}
-                              schemaName={"string"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string","description":"The unique identifier of the media file."}}
-                            >
-                              
-                            </SchemaItem><SchemaItem
-                              collapsible={false}
-                              name={"media_url"}
-                              required={false}
-                              schemaName={"string"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string","description":"The URL to access the media file."}}
-                            >
-                              
-                            </SchemaItem><SchemaItem
-                              collapsible={false}
-                              name={"content_type"}
-                              required={false}
-                              schemaName={"string"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string","description":"The MIME type of the media file."}}
-                            >
-                              
-                            </SchemaItem><li>
-                              <div
-                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
-                              >
-                                ]
-                              </div>
-                            </li>
-                          </div>
-                        </details>
-                      </SchemaItem>
-                    </ul>
-                  </details>
-                </TabItem><TabItem
-                  label={"Example (from schema)"}
-                  value={"Example (from schema)"}
-                >
-                  <ResponseSamples
-                    responseExample={"{\n  \"media_files\": [\n    {\n      \"media_id\": \"string\",\n      \"media_url\": \"string\",\n      \"content_type\": \"string\"\n    }\n  ]\n}"}
-                    language={"json"}
-                  >
-                    
-                  </ResponseSamples>
-                </TabItem>
-              </SchemaTabs>
-            </TabItem>
-          </MimeTabs>
-        </div>
-      </TabItem>
-    </ApiTabs>
-  </div>
+<div class="notice-box-response">
+  <p><strong>Note:</strong> The default rate limit for this API is 20 requests per minute. If the rate limit is exceeded, the following error would be thrown: "too many requests"</p>
 </div>
-      
+  #### API Endpoint
+
+
+<div class="api-container">
+  <div class="api-method">GET</div>
+<div className="api-url">
+  {'https://api.plivo.com/v1/Account/{auth_id}/Message/'}
+</div>
+</div>
+
+  ### Arguments
+
+  <table class="table table-striped table-markdown">
+    <tbody>
+      <tr>
+        <td class="text-right"><strong class="name">subaccount <span>string</span></strong></td>
+        <td>
+          <p>Filters for</p>
+          <ul>
+            <li><p>Outbound messages sent using a specific subaccount’s Auth Token.</p></li>
+            <li><p>Inbound messages received on a phone number associated with a specific subaccount.</p></li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="notice-box-response"><p><strong>Note:</strong> The subaccount filter is implicitly applied when a subaccount’s API credentials are used to fire this API. This argument should be used only when the parent account’s API credentials are used to fire this API.</p></div>
+
+  <table class="table table-striped table-markdown">
+    <tbody>
+      <tr>
+        <td class="text-right"><strong class="name">message_direction <span>string</span></strong></td>
+        <td>
+          <p>Filters the results by message direction. Allowed values: <mark>inbound</mark>, <mark>outbound</mark></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-right"><strong class="name">message_time</strong></td>
+        <td>
+          <p>Filters outbound and inbound messages based on the time the message was initiated or received.</p>
+          <p>Timestamps are expected to be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]] format, and are considered to be in UTC time zone.</p>
+          <p>If you do not specify this attribute, the MDR for the last 24 hours will be retrieved by default.</p>
+          <p>The filter can be used in five forms:</p>
+          <ul>
+            <li><p><mark>message_time</mark>: Use this argument to filter for messages by exact timestamp. The format expected is YYYY-MM-DD HH:MM:ss:uuuuuu.</p></li>
+            <li><p><mark>message_time__gt</mark>: <mark>gt</mark> stands for greater than. Use this argument to filter for messages sent or received after a given time.</p></li>
+            <li><p><mark>message_time__gte</mark>: <mark>gte</mark> stands for greater than or equal to. Use this argument to filter for messages sent or received after or exactly at a given time.</p></li>
+            <li><p><mark>message_time__lt</mark>: <mark>lt</mark> stands for less than. Use this argument to filter for messages sent or received before a given time.</p></li>
+            <li><p><mark>message_time__lte</mark>: <mark>lte</mark> stands for less than or equal to. Use this argument to filter for messages sent or received before or exactly at a given time.</p></li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="notice-box-response"><strong>Note:</strong> You can combine the above filters to get messages that were sent or received in a particular time range.</div>
+
+  <table class="table table-striped table-markdown">
+    <tbody>
+      <tr>
+        <td class="text-right"><strong class="name">message_state <span>string</span></strong></td>
+        <td>
+          <p>Filter results by the current status of a message. Allowed values: <mark>queued</mark>, <mark>sent</mark>, <mark>failed</mark>, <mark>delivered</mark>, <mark>undelivered</mark>, <mark>received</mark>, <mark>rejected</mark></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-right"><strong class="name">message_type <span>string</span></strong></td>
+        <td>
+          <p>Filter results by the type of message. Allowed values: <mark>sms</mark>, <mark>mms</mark>, <mark>whatsapp</mark></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-right"><strong class="name">error_code <span>string</span></strong></td>
+        <td>
+          <p>Filter results by a standard <a href="/docs/messaging/troubleshooting/error-codes/">Plivo error code</a>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-right"><strong class="name">powerpack_id <span>string</span></strong></td>
+        <td>
+          <p>Filter results based on messages sent using a specific Power pack.</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-right"><strong class="name">from_number <span>string</span></strong></td>
+        <td>
+          <p>Filters results by the number or sender ID from which the messages were sent using Plivo APIs.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  ### Returns
+
+  This API returns a list of Message Detail Records matching the filters specified in the request.
+
+  The API response also contains a `meta` field with the fields:
+  - `limit`: the size of the page returned in the response
+  - `offset`: the offset for the page returned in the response
+  - `next`: the URL that points to the next page of results
+  - `previous`: the URL that points to the previous page of results
+
+ 
+ </CustomLayout>
