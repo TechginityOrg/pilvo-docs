@@ -235,8 +235,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 .api-container {
   display: flex;
   align-items: center;
@@ -281,6 +279,7 @@ html {
 
 .notice-box-response p {
   margin: 0; /* Reset default paragraph margin */
+}
 
 .helpfull-value {
   display: none;
@@ -292,5 +291,4 @@ html {
 
 .comparison-table td {
   width: 50% !important;
-
 }
