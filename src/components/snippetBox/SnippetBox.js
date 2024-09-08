@@ -98,7 +98,8 @@ const SnippetTabs = () => {
         </div>
         <div className="snippet-content">
           <div className="snippet-header">
-            {/* ... (Your title and description remain the same) */}
+            <h3>List All Messages</h3>
+            <p>Example Request</p>
           </div>
 
           <div className="code-wrapper"> 
