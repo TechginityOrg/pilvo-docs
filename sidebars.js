@@ -8,9 +8,9 @@ const sidebars = {
       label: 'Quick Start',
       items: [
         'quickStart/php',
-        'quickStart/rubyquickstart',
+        'quickStart/RubyQuickstart',
         'quickStart/node-expressjs',
-        'quickStart/javaQuickstart',
+        'quickStart/JavaQuickstart',
         'quickStart/GoQuickstart',
       ],
     },
