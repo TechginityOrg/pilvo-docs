@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './SnippetTabs.css';
+import { FiCopy } from 'react-icons/fi'; 
 
 const snippets = {
   Python: `
@@ -69,61 +70,64 @@ const SnippetTabs = () => {
 
   return (
     <div className='snippit-main'>
-    <div className="snippet-tabs">
-      <div className="version-tabs"> 
-        <button 
-          className={`version-tab-button ${activeVersion === 'LATEST' ? 'active' : ''}`}
-          onClick={() => setActiveVersion('LATEST')}
-        >
-          LATEST
-        </button>
-        <button 
-          className={`version-tab-button ${activeVersion === 'LEGACY' ? 'active' : ''}`}
-          onClick={() => setActiveVersion('LEGACY')}
-        >
-          LEGACY
-        </button>
-      </div>
-      <div className="tabs">
-        {Object.keys(snippets).map(lang => (
-          <button
-            key={lang}
-            className={`tab-button ${activeTab === lang ? 'active' : ''}`}
-            onClick={() => setActiveTab(lang)}
+      <div className="snippet-tabs">
+        <div className="version-tabs"> 
+          <button 
+            className={`version-tab-button ${activeVersion === 'LATEST' ? 'active' : ''}`}
+            onClick={() => setActiveVersion('LATEST')}
           >
-            {lang}
+            LATEST
           </button>
-        ))}
-      </div>
-      <div className="snippet-content">
-        <div className="snippet-header">
-          <button className="copy-button" onClick={copyToClipboard}>
-            Copy
+          <button 
+            className={`version-tab-button ${activeVersion === 'LEGACY' ? 'active' : ''}`}
+            onClick={() => setActiveVersion('LEGACY')}
+          >
+            LEGACY
           </button>
-          <span className="copy-success">{copySuccess}</span>
         </div>
-        <pre><code dangerouslySetInnerHTML={{ __html: snippets[activeTab] }}></code></pre>
+        <div className="tabs">
+          {Object.keys(snippets).map(lang => (
+            <button
+              key={lang}
+              className={`tab-button ${activeTab === lang ? 'active' : ''}`}
+              onClick={() => setActiveTab(lang)}
+            >
+              {lang}
+            </button>
+          ))}
+        </div>
+        <div className="snippet-content">
+          <div className="snippet-header">
+            {/* ... (Your title and description remain the same) */}
+          </div>
 
-        {/* Response Section */}
-        <div className="response-section">
-          <h3>Response</h3>
-          <p>HTTP Status Code: 200</p>
-          <pre>
-            <code>
-              {JSON.stringify({
-                "Api_id": "f237ffbd-e1b1-4bd3-a2cb-874hebb",
-                "meta": {
-                  "limit": 1,
-                  "offset": 0,
-                  "next": "/v1/Account/<AUTH_ID>/Message/?limit=1&offset=1",
-                  "previous": null
-                }
-              }, null, 2)}
-            </code>
-          </pre>
+          <div className="code-wrapper"> 
+            <pre><code dangerouslySetInnerHTML={{ __html: snippets[activeTab] }}></code></pre>
+            <button className="copy-button" onClick={copyToClipboard}>
+              <FiCopy /> 
+              <span className="copy-success">{copySuccess}</span> 
+            </button>
+          </div>
+
+          <div className="response-section">
+            <h3>Response</h3>
+            <p>HTTP Status Code: 200</p>
+            <pre>
+              <code>
+                {JSON.stringify({
+                  "Api_id": "f237ffbd-e1b1-4bd3-a2cb-874hebb",
+                  "meta": {
+                    "limit": 1,
+                    "offset": 0,
+                    "next": "/v1/Account/<AUTH_ID>/Message/?limit=1&offset=1",
+                    "previous": null
+                  }
+                }, null, 2)}
+              </code>
+            </pre>
+          </div>
         </div>
       </div>
-    </div>
       <div className="rating-section">
         <h3>Rate this page</h3>
         <div className="stars">
@@ -134,7 +138,7 @@ const SnippetTabs = () => {
           <span className="star">★</span>
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 

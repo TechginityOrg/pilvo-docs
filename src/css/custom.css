@@ -18,6 +18,8 @@
   --ifm-color-secondary-heading: #333;
   --ifm-color-logo: #000000;
   --ifm-color-logo-secondary: #333;
+  --ifm-color-link: #333;
+  --ifm-code-block: #f8f9fb;
   --ifm-card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -36,6 +38,8 @@
   --ifm-color-primary-heading: #ffff;
   --ifm-color-secondary-heading: #fff;
   --ifm-color-logo: #fff;
+  --ifm-code-block: #333;
+  --ifm-color-link: #fff;
   --ifm-color-logo-secondary: rgb(159, 157, 157);
   --ifm-card-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
@@ -231,6 +235,53 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+.api-container {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.api-method {
+  float: none;
+  color: #05006d;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 4px 0 0 4px;
+  background: #f1f2f7;
+  padding: 0.625rem 0.4375rem;
+  word-break: normal;
+  width: 20%;
+  text-align: center;
+  
+}
+
+.api-url{
+  overflow: auto;
+  border-radius: 0 4px 4px 0;
+  border-width: 1px 1px 1px 0;
+  border-color: #e8eaf1;
+  font-size: 1rem;
+  color: var(--ifm-color-link);
+  padding: 0.625rem 0.5625rem;
+  background-color: #f8f9fb;
+  white-space: nowrap;
+  width: 80%;
+  font-weight: 400;
+  word-break: break-word;
+}
+
+.notice-box-response {
+  border-left: 4px solid #4CAF50; /* Green vertical border */
+  padding: 10px;
+  background-color: #f9f9f9; /* Light background color */
+  margin-bottom: 10px; /* Optional: Add margin for spacing */
+}
+
+.notice-box-response p {
+  margin: 0; /* Reset default paragraph margin */
+
 .helpfull-value {
   display: none;
 }
@@ -241,4 +292,5 @@ html {
 
 .comparison-table td {
   width: 50% !important;
+
 }
